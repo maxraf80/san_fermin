@@ -258,6 +258,11 @@ footer .contacto h3 {
     background-color: rgb(1, 171, 1);
 }
 
+.wa-button img {
+    width: 100px;
+    height: 100px;
+}
+
 .wa-link {
     color: white;
     text-decoration: none; /* Elimina el subrayado del texto */

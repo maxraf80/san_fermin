@@ -1,0 +1,265 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: url('\resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:start;
+  width: 100%;    
+  padding-right: 0;
+}
+
+.col-logo {
+  flex: 1;
+  margin-left: 0;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.col-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.col {
+  flex: 1;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu {
+  margin: 40px auto 0 auto; /* Ajusta los márgenes para centrar horizontalmente */
+  position: relative; /* Cambia de absolute a relative para evitar que se superponga */
+  top: unset; /* Elimina la posición fija */
+  left: unset; /* Elimina la posición fija */
+  transform: none; /* Elimina el ajuste de transformación */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  max-width: 90%; /* Limita el ancho del menú */
+  text-align: center;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background 0.2s;
+  font-family: 'Nunito Sans', sans-serif;
+  text-decoration: underline;
+}
+
+.menu a:hover {
+  background: #ddd;
+  border-radius: 4px;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  padding: 15px 10px;
+  text-align: left;
+  margin-top: auto;
+  font-size: 0.85rem;
+  line-height: 1
+}
+
+footer h3 {
+  font-weight: bold;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer .contacto p:nth-child(3),
+footer .contacto p:nth-child(4),
+footer .contacto p:nth-child(5) {
+  text-decoration: underline;
+}
+
+footer .contacto p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 5px 0;
+  color: #ccc;
+}
+
+footer .contacto h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.col-2 {
+  flex: 1;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.col-2 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.col-2 h3 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.col-2 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.col-2 ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.col-2 ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 480px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;     /* Centra horizontalmente */
+  }
+  .menu {
+    margin: 0;              /* Elimina los márgenes automáticos */
+    width: 90%;             /* Ajusta el ancho si lo prefieres */
+    max-width: 300px;       /* Opcional: limita el ancho */
+  }
+  .col-title h1,
+  .col-title p {
+    display: none; /* Oculta el texto en pantallas de teléfonos */
+  }
+}
+
+@media (min-width: 481px) {
+  .col-title h1,
+  .col-title p {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+  }
+
+  .col-title {
+    text-align: center; /* Centra el texto del título */
+  }
+
+  footer {
+    margin-top: auto;
+    position: relative; /* Elimina position: absolute */
+    bottom: unset; /* Elimina la posición fija */
+    width: 100%;
+  }
+}
+
+.col-title h1 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.col-title p {
+  color: white;
+}
+
+.wa-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: auto;
+    width: auto; /* Ajusta el ancho al contenido */
+    padding: 5px; /* Reduce el espaciado interno */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 0.8em; /* Reduce el tamaño de la fuente */
+    border: 0;
+    background-color: #25D366;
+    border-radius: 50%; /* Mantiene el botón redondo */
+    box-shadow: 3px 3px 6px 1px rgba(91, 90, 90, 0.8);
+    text-align: center;
+    line-height: 1; /* Ajusta el espaciado entre líneas */
+    white-space: nowrap; /* Evita saltos de línea innecesarios */
+}
+
+.wa-button:hover {
+    background-color: rgb(1, 171, 1);
+}
+
+.wa-link {
+    color: white;
+    text-decoration: none; /* Elimina el subrayado del texto */
+    display: inline-block; /* Ajusta el tamaño al contenido */
+}

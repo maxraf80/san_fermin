@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Responsivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="Emedical Madrid" content="Centro de psicotécnicos para renovar el carnet de conducir y armas en Madrid">
+    <meta name="keywords"
+        content="psicotécnicos Madrid, renovación carnet conducir, renovación licencia armas, centro reconocimiento de conducores">
+    <meta name="author" content="mundano80">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <!-- Add your CSS and other meta tags here -->
+</head>
+
+
+
+
+
+ <footer id="contacto" class="fila">
+        <div class="contacto">
+            <h3>Contacta con nosotros</h3>
+            <p>Para más información o para concertar una cita, no dudes en ponerte en contacto con nosotros:</p>
+            <p>Email: info@ejemplo.com</p>
+            <p>Teléfono: +34 613 0000 30</p>
+            <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+        </div>
+        <button name="button" class="wa-button">
+            <a class="wa-link" href="https://wa.me/34613000030" target="_blank">Contáctanos<br>por Whatsapp</a>
+        </button>
+    </footer>
+
+</body>
+
+</html>

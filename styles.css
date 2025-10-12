@@ -182,9 +182,10 @@ footer .contacto h3 {
     align-items: center;     /* Centra horizontalmente */
   }
   .menu {
-    margin: 0 auto;              /* Elimina los márgenes automáticos */
+    /*margin: 0 auto; */            /* Elimina los márgenes automáticos */
     display: inline-block;
-    width: 90%;             /* Ajusta el ancho si lo prefieres */
+    width: 90%;            /* Ajusta el ancho si lo prefieres */
+    left: 45%;
     max-width: 450px;       /* Opcional: limita el ancho */
     /* asegurar centrado horizontal */
     justify-content: center;

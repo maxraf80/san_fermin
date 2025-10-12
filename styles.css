@@ -293,3 +293,28 @@ footer .contacto h3 {
     text-decoration: none; /* Elimina el subrayado del texto */
     display: inline-block; /* Ajusta el tamaño al contenido */
 }
+
+.disclaimer {
+  background-color: #000; /* negro */
+  color: #fff;            /* letras blancas */
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* enlaces dentro del disclaimer */
+.disclaimer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ajustar legibilidad en móviles */
+@media (max-width: 480px) {
+  .disclaimer {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+  }
+}

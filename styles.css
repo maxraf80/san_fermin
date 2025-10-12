@@ -185,7 +185,21 @@ footer .contacto h3 {
     margin: 0;              /* Elimina los márgenes automáticos */
     width: 90%;             /* Ajusta el ancho si lo prefieres */
     max-width: 300px;       /* Opcional: limita el ancho */
+    /* asegurar centrado horizontal */
+    justify-content: center;
+    text-align: center;
   }
+  .menu ul {
+    /* centrar los items en la columna */
+    align-items: center;
+  }
+
+  .menu a {
+    /* asegurar que el texto del enlace quede centrado */
+    text-align: center;
+    display: inline-block;
+  }
+
   .col-title h1,
   .col-title p {
     display: none; /* Oculta el texto en pantallas de teléfonos */

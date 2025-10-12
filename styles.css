@@ -244,8 +244,8 @@ footer .contacto h3 {
     background: transparent;  /* quitar color de fondo */
     box-shadow: none;         /* eliminar sombra */
     border-radius: 0;         /* quitar redondeado para que solo se vea la imagen */
-    width: auto;
-    height: auto;
+    width: 100px;             /* establece un área clickeable consistente */
+    height: 100px;            /* establece un área clickeable consistente */
     line-height: 0;           /* evitar espacio extra alrededor de la imagen */
     cursor: pointer;
     outline: none;
@@ -258,6 +258,19 @@ footer .contacto h3 {
 .wa-button img {
     width: 100px;
     height: 100px;
+}
+
+@media (max-width: 480px) {
+  .wa-button {
+    bottom: 5px;
+    right: 5px;
+    width: 60px;    /* ajusta el área clickeable en móviles */
+    height: 60px;   /* ajusta el área clickeable en móviles */
+  }
+  .wa-button img {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .wa-link {

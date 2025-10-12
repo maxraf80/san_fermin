@@ -176,7 +176,7 @@ footer .contacto h3 {
 @media (max-width: 480px) {
   body {
     min-height: 100vh;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     justify-content: center; /* Centra verticalmente */
     align-items: center;     /* Centra horizontalmente */

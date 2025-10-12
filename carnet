@@ -16,23 +16,56 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
-    <!-- Add your CSS and other meta tags here -->
 </head>
 
+<body>
+    <header class="row">
+        <div class="col-logo">
+            <img src="resources/logo-emedical.png" alt="Logo Emedical Centro de reconocimiento de conducores">
+        </div>
+        <div class="col-title">
+            <h1>Emedical Madrid</h1>
+            <p>Centro de psicotécnicos para renovar el carnet de conducir y armas en Madrid</p>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Psicotécnicos</a></li>
+                    <li><a href="#">Certificados médicos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="fila">
+      <div class="col-2">
+        <section>
+          <h1>Renovación de carnet de conducir en Madrid: rápida, económica y sin esperas</h1>
+          <p>En menos de 10 minutos con psicotécnico, foto incluida y carnet provisional al instante; el definitivo se envía a domicilio sin necesidad de acudir a Tráfico, con tramitación gratuita incluida.</p>
+        </section>
+        <section>
+          
+          <!-- Botón Call to Action: "Pide Cita" para cuando haya página de formulario para pedir cita-->
+          <!-- <a href="/sustituir por ruta/" class="btn">Pide Cita</a> -->
+        </section>
 
 
+      </div>
+    </section>
 
-
- <footer id="contacto" class="fila">
+    <!-- Tercera franja horizontal: Pie de página -->
+    <footer id="contacto" class="fila">
         <div class="contacto">
             <h3>Contacta con nosotros</h3>
             <p>Para más información o para concertar una cita, no dudes en ponerte en contacto con nosotros:</p>
-            <p>Email: info@ejemplo.com</p>
+            <!--<p>Email: info@ejemplo.com</p>-->
             <p>Teléfono: +34 613 0000 30</p>
-            <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+            <p>Dirección: Calle de la Mezquita 5, 28041, Madrid</p>
         </div>
         <button name="button" class="wa-button">
-            <a class="wa-link" href="https://wa.me/34613000030" target="_blank">Contáctanos<br>por Whatsapp</a>
+            <a class="wa-link" href="https://wa.me/34613000030" target="_blank">
+                <img src="resources/whatsapp.png" alt="WhatsApp Icon">
+            </a>
         </button>
     </footer>
 

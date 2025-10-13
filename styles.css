@@ -57,9 +57,9 @@ justify-content: center;
 align-items: center;
 background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
 border-radius: 8px; /* Bordes redondeados */
-padding: 10px; /* Espaciado interno */
+padding: 2px; /* Espaciado interno */
 max-width: 90%; /* Limita el ancho del menú */
-text-align: center;
+text-align: left;
 }
 
 .menu ul {

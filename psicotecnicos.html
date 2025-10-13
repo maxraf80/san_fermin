@@ -4,78 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Emedical Madrid - Renueva tu carnet</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="Emedical Madrid" content="Centro de psicotécnicos para renovar el carnet de conducir y armas en Madrid">
+    <meta name="description" content="Centro de psicotécnicos para renovar el carnet de conducir y armas en Madrid">
     <meta name="keywords"
-        content="psicotécnicos Madrid, renovación carnet conducir, renovación licencia armas, centro reconocimiento de conducores">
+        content="psicotécnicos Madrid, renovación carnet conducir, renovación licencia armas, centro reconocimiento de conductores">
     <meta name="author" content="mundano80">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
+
+    <!-- JSON-LD para SEO local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Emedical Madrid",
+      "image": [
+        "https://tudominio.com/resources/logo-emedical.png"
+      ],
+      "url": "https://tudominio.com/",
+      "telephone": "+34 613 000 030",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle de la Mezquita 5",
+        "addressLocality": "Madrid",
+        "addressRegion": "Madrid",
+        "postalCode": "28041",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.373,
+        "longitude": -3.700
+      },
+      "areaServed": [
+        "Madrid",
+        "Usera",
+        "San Fermin"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "10:00",
+          "closes": "13:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "16:00",
+          "closes": "20:30"
+        }
+      ],
+      "makesOffer": [
+        {"@type": "Offer","itemOffered": {"@type": "Service","name": "Renovación carnet de conducir"}},
+        {"@type": "Offer","itemOffered": {"@type": "Service","name": "Psicotécnicos y certificados médicos oficiales"}},
+        {"@type": "Offer","itemOffered": {"@type": "Service","name": "Certificados de oposiciones"}},
+        {"@type": "Offer","itemOffered": {"@type": "Service","name": "Certificado médico para vigilante de seguridad"}},
+        {"@type": "Offer","itemOffered": {"@type": "Service","name": "Certificados médicos para equipos deportivos"}}
+      ],
+      "accreditation": "Centro validado por la DGT",
+      "potentialAction": {
+        "@type": "ContactAction",
+        "target": "https://wa.me/34613000030"
+      },
+      "sameAs": [
+        "https://www.instagram.com/emedicalmadrid",
+        "https://www.google.com/search?q=Renovar+el+Carnet+de+conducir+E-medical+Madrid+Rese%C3%B1as"
+      ]
+    }
+    </script>
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="row">
         <div class="col-logo">
-            <a href="index.html"> <img src="resources/logo-emedical.png"
-                    alt="Logo Emedical Centro de reconocimiento de conductores">
+            <a href="index.html">
+                <img src="resources/logo-emedical.png" alt="Logo Emedical Centro de reconocimiento de conductores">
             </a>
-
         </div>
         <div class="col-title">
             <h1>Emedical Madrid</h1>
-            <p>Centro de psicotécnicos para renovar el carnet de conducir y armas en Madrid</p>
+            <p class="texto-encabezado">Centro de psicotécnicos para renovar el carnet de conducir y armas en Madrid</p>
 
-            <!-- ======================  MENU  ====================== -->
+            <!-- MENU -->
             <nav class="menu">
                 <ul>
                     <li><a href="carnet.html">Carnet de conducir</a></li>
-                    <li><a href="psicotecnicos.html">Psicotécnicos</a></li>
-                    <li><a href="citas.html">Pide una cita</a></li>
+                    <li><a href="psicotecnicos.html">Psicotécnicos y certificados</a></li>
+                    <li><a href="citas.html" style="font-weight:bold; text-decoration: underline;">Pide una cita</a></li>
                 </ul>
             </nav>
-            <!-- ==================================================== -->
 
+            <!-- BOTÓN DE LLAMADA -->
+            <a href="tel:613000030" class="boton-llamar">📞 Llámanos al 613 0000 30</a>
         </div>
     </header>
 
+    <!-- SECCIÓN PRINCIPAL -->
     <section class="fila">
         <div class="col-2">
+            <section>
+                <h2>Certificado médico psicotécnico y psicotécnicos en Madrid</h2>
+                <p>En <strong>Psicotécnicos Anma</strong>, somos especialistas en la realización de
+                    <strong>psicotécnicos en Navalcarnero y Madrid</strong>. Ofrecemos
+                    <strong>reconocimientos médicos</strong> para <strong>renovar y obtener el carnet de conducir</strong>,
+                    así como <strong>permiso de armas</strong> y visados. También realizamos
+                    <strong>certificados médicos oficiales</strong> y <strong>psicotécnicos para la tenencia de animales
+                        peligrosos, licencia de seguridad privada y embarcaciones</strong>.
+                </p>
 
-        </div>
-    </section>
+                <p>Si estás buscando un lugar confiable para realizar tu <strong>psicotécnico</strong>, este es tu sitio.
+                    Contamos con un equipo cualificado con amplia experiencia en todo tipo de
+                    <strong>reconocimientos médicos y psicotécnicos</strong>. Nuestro objetivo es ofrecer servicios rápidos
+                    y eficaces, trabajando cada día con ilusión y profesionalidad.
+                </p>
 
-    <!-- Tercera franja horizontal: Pie de página -->
-    <footer id="contacto" class="fila">
-        <div class="contacto">
-            <h3>Contacta con nosotros</h3>
-            <p>Para más información o para concertar una cita, no dudes en ponerte en contacto con nosotros:</p>
-            <!--<p>Email: info@ejemplo.com</p>-->
-            <p>Teléfono: +34 613 0000 30</p>
-            <p>Dirección: Calle de la Mezquita 5, 28041, Madrid</p>
-        </div>
-        <button name="button" class="wa-button">
-            <a class="wa-link" href="https://wa.me/34613000030" target="_blank">
-                <img src="resources/whatsapp.png" alt="WhatsApp Icon">
-            </a>
-        </button>
-    </footer>
+                <!-- IMAGEN ANTES DE SERVICIOS -->
+                <img src="resources/ventana.jpeg" alt="Psicotécnicos Anma - Centro médico autorizado"
+                    style="width:100%; margin: 20px 0; border-radius:8px;">
 
-    <div class="disclaimer" role="contentinfo" aria-label="Aviso legal">
-        <p>
-            Aviso: Para cumplir con el RGPD (Reglamento General de Protección de Datos) y entender que tus datos están
-            seguros, debes leer y aceptar la política de
-            <a href="privacidad.html">PRIVACIDAD</a>.
-            Esta web cumple con el RGPD, así que todo está protegido y amparado por la ley.
-            Esta web NO USA COOKIES
-        </p>
-    </div>
+                <h3>Certificado médico psicotécnico para vigilantes de seguridad</h3>
+                <p>Para ejercer como <strong>vigilante de seguridad</strong>, es obligatorio obtener la <strong>Tarjeta
+                        de Identidad Profesional (TIP)</strong> expedida por la <strong>Policía Nacional</strong>.
+                    Los aspirantes deben superar <strong>pruebas físicas y teóricas</strong> y obtener un
+                    <strong>certificado médico psicotécnico</strong>, regulado por el <strong>Real Decreto
+                        2364/1994</strong>.
+                </p>
 
+                <p>En <strong>PSICOTECNICOSMADRID.COM</strong> disponemos de <strong>8 centros autorizados</strong> en
+                    <strong>Madrid Capital, Alcorcón, Las Rozas y Navalcarnero</strong>, donde podrás obtener tu
+                    <strong>certificado médico psicotécnico</strong> para obtener o renovar la TIP.
+                    <a href="centros.html" style="font-weight:bold; text-decoration: underline;">Consulta aquí los
+                        centros</a>.
+                </p>
 
-</body>
+                <h3>Otros psicotécnicos disponibles</h3>
+                <ul>
+                    <li><strong>Renovación de carnet de conducir</strong> en una sola visita, sin acudir a Tráfico</li>
+                    <li><strong>Obtención por primera vez</strong></li>
+                    <li><strong>Canje de permisos extranjeros</strong></li>
+                    <li><strong>Recuperación de puntos</strong></li>
+                    <li><strong>Permiso de armas y visados</strong></li>
+                    <li><strong>Certificados para animales peligrosos, embarcaciones y seguridad privada</strong></li>
+                </ul>
 
-</html>
+                <h3>Ventajas de nuestro centro médico</h3>
+                <ul>
+                    <li><strong>Carnet provisional al instante</strong> y <strong>envío del definitivo a domicilio</strong>
+                    </li>
+                    <li><strong>Sin necesidad de acudir a Tráfico</strong></li>
+                    <li><strong>Tramitación con Tráfico incluida y gratuita</strong></li>
+                    <li><strong>Examen psicotécnico rápido:</strong> 15 minutos con nuestro equipo médico y psicológico</li>

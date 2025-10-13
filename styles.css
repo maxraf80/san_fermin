@@ -27,6 +27,7 @@ flex-direction: column;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-left: 4.5em;
     margin-top: 1em;
+    margin-bottom: 1em;
     font-weight: bold;
     transition: background-color 0.2s ease;
   }

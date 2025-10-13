@@ -1,3 +1,6 @@
+/* ------------------------------------------------------------------
+   General Settings
+-------------------------------------------------------------------*/
 html {
   scroll-behavior: smooth;
 }
@@ -15,13 +18,16 @@ body {
   flex-direction: column;
 }
 
+/* ------------------------------------------------------------------
+   Header & Logo
+-------------------------------------------------------------------*/
 header {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:start;
-  width: 100%;    
+  align-items: start;
+  width: 100%;
   padding-right: 0;
 }
 
@@ -31,6 +37,7 @@ header {
   margin-right: 10px;
   margin-top: 20px;
 }
+
 .col-logo img {
   max-width: 100%;
   height: auto;
@@ -46,19 +53,19 @@ header {
   flex-wrap: wrap;
 }
 
+/* ------------------------------------------------------------------
+   Menu
+-------------------------------------------------------------------*/
 .menu {
-  margin: 40px auto 0 auto; /* Ajusta los márgenes para centrar horizontalmente */
-  position: relative; /* Cambia de absolute a relative para evitar que se superponga */
-  top: unset; /* Elimina la posición fija */
-  left: unset; /* Elimina la posición fija */
-  transform: none; /* Elimina el ajuste de transformación */
+  margin: 40px auto 0 auto;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 10px; /* Espaciado interno */
-  max-width: 90%; /* Limita el ancho del menú */
+  background: rgba(0, 0, 0, 0.6); /* Fondo semi‑transparente */
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 90%;
   text-align: center;
 }
 
@@ -77,16 +84,30 @@ header {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   font-weight: bold;
   padding: 5px 10px;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
   font-family: 'Nunito Sans', sans-serif;
   text-decoration: underline;
 }
 
-.menu a:hover {
+/* Hover / Focus */
+.menu a:hover,
+.menu a:focus {
   background: #ddd;
+  color: #000; /* contraste claro al pasar el ratón */
   border-radius: 4px;
 }
 
+/* ---------- Enlace activo ---------- */
+.menu a.active {
+  background: #0052cc;   /* tono azul oscuro – puedes cambiarlo */
+  color: #ffffff;        /* texto blanco para buen contraste */
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 82, 204, 0.5);
+}
+
+/* ------------------------------------------------------------------
+   Footer
+-------------------------------------------------------------------*/
 footer {
   background: #222;
   color: #fff;
@@ -94,7 +115,7 @@ footer {
   text-align: left;
   margin-top: auto;
   font-size: 0.85rem;
-  line-height: 1
+  line-height: 1;
 }
 
 footer h3 {
@@ -125,6 +146,9 @@ footer .contacto h3 {
   color: #fff;
 }
 
+/* ------------------------------------------------------------------
+   Layout Sections
+-------------------------------------------------------------------*/
 .fila {
   display: flex;
   flex-wrap: wrap;
@@ -173,6 +197,9 @@ footer .contacto h3 {
   color: #555;
 }
 
+/* ------------------------------------------------------------------
+   Media Queries
+-------------------------------------------------------------------*/
 @media (max-width: 480px) {
   body {
     min-height: 100vh;
@@ -181,140 +208,201 @@ footer .contacto h3 {
     justify-content: center; /* Centra verticalmente */
     align-items: center;     /* Centra horizontalmente */
   }
+
   .menu {
-    margin: 0 auto;            /* Elimina los márgenes automáticos */
+    margin: 0 auto;
     display: inline-block;
-    width: 90%;            /* Ajusta el ancho si lo prefieres */
-    max-width: 450px;       /* Opcional: limita el ancho */
-    /* asegurar centrado horizontal */
+    width: 90%;
+    max-width: 450px;
     justify-content: center;
     text-align: center;
   }
-  .menu ul {
-    /* centrar los items en la columna */
-    align-items: center;
-  }
 
-  .menu a {
-    /* asegurar que el texto del enlace quede centrado */
-    text-align: center;
-    display: inline-block;
-  }
+  .menu ul { align-items: center; }
 
-  .col-title h1,
-  .col-title p {
-    display: none; /* Oculta el texto en pantallas de teléfonos */
-  }
+  .menu a { text-align: center; display: inline-block; }
+
+  .col-2 { margin-bottom: 20px; }
 }
 
 @media (min-width: 481px) {
-  .col-title h1,
-  .col-title p {
-    display: block;
-  }
+  footer .contacto p { margin: 5px 0; }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+/* Active link (responsive) – already defined above */
 
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
-    text-align: center; /* Asegura que el texto esté centrado */
-  }
+/* ------------------------------------------------------------------
+   WhatsApp Floating Button
+-------------------------------------------------------------------*/
+.fa-whatsapp {
+  font-size: 2.3em;
+  color: #0f0f0f;
+  background-color: #3e9e34;
+  border-radius: 50%;
+  margin-left: 1.5rem;
+  margin-top: 0.2rem;
+}
 
-  .col-title {
-    text-align: center; /* Centra el texto del título */
-  }
+.whatsapp {
+  text-decoration: none;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  z-index: 9999;
+}
 
-  footer {
-    margin-top: auto;
-    position: relative; /* Elimina position: absolute */
-    bottom: unset; /* Elimina la posición fija */
-    width: 100%;
-  }
+/* ------------------------------------------------------------------
+   WhatsApp Modal
+-------------------------------------------------------------------*/
+.whatsapp-box {
+  padding: 1em 0;
+  width: 320px;
+  height: 400px;
+  background: #fff;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 140px;
+  right: 0;
+  z-index: 100;
+  border: 1px solid #e1e4e6;
+  display: flex;
+  flex-direction: column;
+}
+
+.whatsapp-box .whatsapp-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 12px;
+  border-bottom: 1px solid #e1e4e6;
+  color: #000;
+}
+
+.whatsapp-box .whatsapp-title span {
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.whatsapp-box .whatsapp-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.whatsapp-box .whatsapp-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.whatsapp-box .whatsapp-body h4 {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 600;
+  color: #000;
+}
+
+.whatsapp-box .whatsapp-body p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #000;
+}
+
+.whatsapp-box .whatsapp-body span {
+  font-weight: 700;
+  display: block;
+  margin-top: 5px;
+}
+
+/* ------------------------------------------------------------------
+   Whatsapp Button on Mobile
+-------------------------------------------------------------------*/
+@media (max-width: 576px) {
+  .whatsapp-box { bottom: 80px; }
+}
+
+/* ------------------------------------------------------------------
+   Title Section
+-------------------------------------------------------------------*/
+.col-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .col-title h1 {
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 5.2rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.col-title h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  line-height: 120%;
+  color: #ffffff;
 }
 
 .col-title p {
-  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 170%;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  max-width: 700px;
 }
 
-.wa-button {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    padding: 0;               /* eliminar espacio alrededor del icono */
-    border: 0;
-    background: transparent;  /* quitar color de fondo */
-    box-shadow: none;         /* eliminar sombra */
-    border-radius: 0;         /* quitar redondeado para que solo se vea la imagen */
-    width: 100px;             /* establece un área clickeable consistente */
-    height: 100px;            /* establece un área clickeable consistente */
-    line-height: 0;           /* evitar espacio extra alrededor de la imagen */
-    cursor: pointer;
-    outline: none;
+/* ------------------------------------------------------------------
+   WhatsApp Button (mobile)
+-------------------------------------------------------------------*/
+.whatsapp-btn-mobile {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 9999;
 }
 
-.wa-button:focus {
-    outline: none;
-}
-
-.wa-button img {
-    width: 100px;
-    height: 100px;
-}
-
-@media (max-width: 480px) {
-  .wa-button {
-    bottom: 5px;
-    right: 5px;
-    width: 60px;    /* ajusta el área clickeable en móviles */
-    height: 60px;   /* ajusta el área clickeable en móviles */
-  }
-  .wa-button img {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-.wa-link {
-    color: white;
-    text-decoration: none; /* Elimina el subrayado del texto */
-    display: inline-block; /* Ajusta el tamaño al contenido */
-}
-
-.disclaimer {
-  background-color: #000; /* negro */
-  color: #fff;            /* letras blancas */
-  text-align: center;
-  padding: 12px 16px;
-  font-size: 0.85rem;
-  line-height: 1.4;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* enlaces dentro del disclaimer */
-.disclaimer a {
+.whatsapp-btn-mobile i {
   color: #fff;
-  text-decoration: underline;
+  font-size: 28px;
 }
 
-/* ajustar legibilidad en móviles */
-@media (max-width: 480px) {
-  .disclaimer {
-    font-size: 0.8rem;
-    padding: 10px 12px;
-  }
+/* ------------------------------------------------------------------
+   Disclaimer Section
+-------------------------------------------------------------------*/
+.disclaimer {
+  width: 80%;
+  margin: auto;
+  padding: 10px 0;
+  color: #000;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
 }
+
+/* ------------------------------------------------------------------
+   Additional Styles (unchanged)
+-------------------------------------------------------------------*/
+.col-title h1,
+.col-title h2,
+.col-title p { color: #ffffff; }

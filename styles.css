@@ -85,7 +85,7 @@ text-align: left;
 .menu ul {
 display: flex;
 flex-direction: column;
-gap: 1em;
+/*gap: 1em;*/
 list-style: none;
 margin: 0;
 padding: 0;

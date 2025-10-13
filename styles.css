@@ -23,6 +23,7 @@ flex-direction: column;
     color: white;
     text-decoration: none;
     border-radius: 8px;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
     font-weight: bold;
     transition: background-color 0.2s ease;
   }

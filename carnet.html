@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Emedical Madrid - Renueva tu carnet</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="Emedical Madrid" content="Centro de psicotécnicos para renovar el carnet de conducir y armas en Madrid">
     <meta name="keywords"
@@ -16,6 +16,95 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
+    <!-- Add your CSS and other meta tags here -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Emedical Madrid",
+      "image": [
+        "https://tudominio.com/resources/logo-emedical.png"
+      ],
+      "url": "https://tudominio.com/",
+      "telephone": "+34 613 000 030",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle de la Mezquita 5",
+        "addressLocality": "Madrid",
+        "addressRegion": "Madrid",
+        "postalCode": "28041",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.373,
+        "longitude": -3.700
+      },
+      "areaServed": [
+        "Madrid",
+        "Usera",
+        "San Fermin"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "10:00",
+          "closes": "13:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "16:00",
+          "closes": "20:30"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Renovación carnet de conducir" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Psicotécnicos y certificados médicos oficiales" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Certificados de oposiciones" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Certificado médico para vigilante de seguridad" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Certificados médicos para equipos deportivos" }
+        }
+      ],
+      "accreditation": "Centro validado por la DGT",
+      "potentialAction": {
+        "@type": "ContactAction",
+        "target": "https://wa.me/34613000030"
+      },
+      "sameAs": [
+        "https://www.instagram.com/emedicalmadrid",
+        "https://www.google.com/search?q=Renovar+el+Carnet+de+conducir+E-medical+Madrid+Rese%C3%B1as"
+      ],
+      "hasPart": []
+    }
+    </script>
 </head>
 
 <body>
@@ -28,17 +117,19 @@
         </div>
         <div class="col-title">
             <h1>Emedical Madrid</h1>
-            <p>Centro de psicotécnicos para renovar el carnet de conducir y armas en Madrid</p>
+            <p class="texto-encabezado">Centro de psicotécnicos para renovar el carnet de conducir y armas en Madrid</p>
 
             <!-- ======================  MENU  ====================== -->
             <nav class="menu">
                 <ul>
                     <li><a href="carnet.html">Carnet de conducir</a></li>
-                    <li><a href="psicotecnicos.html">Psicotécnicos</a></li>
+                    <li><a href="psicotecnicos.html">Psicotécnicos y certificados</a></li>
                     <li><a href="citas.html">Pide una cita</a></li>
                 </ul>
             </nav>
-            <!-- ==================================================== -->
+            <!-- ======== BOTÓN DE LLAMADA ======== -->
+            <a href="tel:613000030" class="boton-llamar">📞 Llámanos al 613 0000 30</a>
+            <!-- ================================== -->
 
         </div>
     </header>
@@ -47,62 +138,91 @@
         <div class="col-2">
             <section>
                 <h2>Renovación de carnet de conducir en Madrid: rápida, económica y sin esperas</h2>
-                <p>En menos de 10 minutos con psicotécnico, foto incluida y carnet provisional al instante; el
-                    definitivo se envía a domicilio sin necesidad de acudir a Tráfico, con tramitación gratuita
-                    incluida.</p>
-            </section>
-            <section>
-                <!-- Botón Call to Action: "Pide Cita" para cuando haya página de formulario para pedir cita-->
-                <!-- <a href="/sustituir por ruta/" class="btn">Pide Cita</a> -->
-            </section>
-            <section>
-                <h3>En nuestro <strong>centro médico autorizado por la DGT</strong>, realizamos certificados
-                    psicotécnicos para:</h3>
+                <p>En <strong>Emedical Madrid</strong> realizamos la <strong>renovación del carnet de conducir</strong>
+                    de forma rápida y cómoda.
+                    En menos de 10 minutos completamos el <strong>psicotécnico</strong>, la <strong>foto</strong> y la
+                    entrega del
+                    <strong>carnet provisional</strong> al instante. El carnet definitivo se envía a domicilio sin
+                    necesidad de acudir a Tráfico, con
+                    <strong>tramitación gratuita incluida</strong>.
+                </p>
+
+                <!-- IMAGEN ANTES DE SERVICIOS -->
+                <img src="resources/ventana.jpeg" alt="Centro Emedical Madrid"
+                    style="width:100%; margin: 20px 0; border-radius:8px;">
+
+                <h3>Certificados psicotécnicos para:</h3>
                 <ul>
                     <li>Renovación de carnet de conducir</li>
                     <li>Obtención por primera vez</li>
                     <li>Canje de permisos extranjeros</li>
                     <li>Recuperación de puntos</li>
                 </ul>
-            </section>
-            <section>
-                <h2>Ventajas</h2>
+
+                <h3>Ventajas de nuestro centro médico</h3>
                 <ul>
                     <li>Carnet provisional al instante y envío del definitivo a domicilio</li>
                     <li>Sin necesidad de acudir a Tráfico</li>
                     <li>Tramitación con Tráfico incluida y gratuita</li>
-                    <li>Examen psicotécnico, en 15 minutos con nuestro equipo médico y psicológico</li>
+                    <li>Examen psicotécnico rápido: 15 minutos con nuestro equipo médico y psicológico</li>
+                    <li>Precios cerrados y transparentes</li>
                 </ul>
-            </section>
-            <section>
-                <h2>Precios Cerrados y Transparentes</h2>
-                <ul>
-                    <li>Renovación General: 55€</li>
-                    <li><strong>10% de descuento</strong> para <strong>taxistas, FCSE y desempleados</strong></li>
-                    <li>Primera obtención: 30€</li>
-                    <li><strong>Tarifas especiales para renovaciones cortas</strong> por condiciones médicas o edad</li>
-                </ul>
-            </section>
 
+                <h3>Tarifas</h3>
+                <ul>
+                    <li>Renovación general: 55€</li>
+                    <li>10% de descuento para taxistas, FCSE y desempleados</li>
+                    <li>Primera obtención: 30€</li>
+                    <li>Tarifas especiales para renovaciones cortas por condiciones médicas o edad</li>
+                </ul>
+
+                <!-- IMAGEN DESPUÉS DE OPOSICIONES -->
+                <img src="resources/premium_photo-1682123572176-9f5fac68d56b.avif" alt="Certificado DGT"
+                    style="width:100%; margin: 15px 0; border-radius:8px;">
+
+                <p>Solicita tu <a href="citas.html" style="font-weight:bold; text-decoration: underline;">cita
+                        previa</a> para una atención rápida y sin esperas.
+                    Puedes consultar los horarios y disponibilidad según tu categoría o tipo de certificado. También
+                    ofrecemos
+                    <strong>renovaciones sin cita</strong> en determinados horarios según la afluencia.
+                </p>
+
+                <p>En <strong>Emedical Madrid</strong> trabajamos para que la renovación de tu carnet sea
+                    <strong>inmediata, sencilla y sin complicaciones</strong>.
+                    Ven a nuestro centro autorizado por la DGT y sal con tu <strong>autorización provisional</strong>
+                    lista para conducir.</p>
+            </section>
         </div>
+
     </section>
 
+    </div>
+    </section>
+
+
     <!-- Tercera franja horizontal: Pie de página -->
-    <footer id="contacto" class="fila">
+    <footer id="contact" class="fila">
         <div class="contacto">
             <h3>Contacta con nosotros</h3>
-            <p>Para más información o para concertar una cita, no dudes en ponerte en contacto con nosotros:</p>
+            <p>
+                Para más información o para concertar una <a href="citas.html"
+                    style="font-weight:bold; text-decoration: underline;">cita</a>, no dudes en ponerte en contacto con
+                nosotros.
+            </p>
+
+
             <!--<p>Email: info@ejemplo.com</p>-->
-            <p>Teléfono: +34 613 0000 30</p>
-            <p>Dirección: Calle de la Mezquita 5, 28041, Madrid</p>
+            <p>Teléfono: <a href="tel:+34613000030" aria-label="Llamar a Emedical Madrid">+34 613 000 030</a></p>
+            <p><a href="https://maps.app.goo.gl/tFBQsxW2NMpnf48e8" target="_blank" rel="noopener noreferrer">Dirección:
+                    Calle
+                    de la Mezquita 5, 28041, Madrid</a></p>
         </div>
-        <button name="button" class="wa-button">
-            <a class="wa-link" href="https://wa.me/34613000030" target="_blank">
-                <img src="resources/whatsapp.png" alt="WhatsApp Icon">
-            </a>
-        </button>
+        <a class="wa-button wa-link" href="https://wa.me/34613000030" target="_blank" rel="noopener noreferrer">
+            <img src="resources/whatsapp.png" alt="WhatsApp Icon">
+        </a>
     </footer>
 
+    <!-- Franja de disclaimer -->
     <div class="disclaimer" role="contentinfo" aria-label="Aviso legal">
         <p>
             Aviso: Para cumplir con el RGPD (Reglamento General de Protección de Datos) y entender que tus datos están

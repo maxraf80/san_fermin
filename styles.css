@@ -67,7 +67,7 @@ flex-wrap: wrap;
 }
 
 .menu {
-margin: 40px auto 0 auto; /* Ajusta los márgenes para centrar horizontalmente */
+margin: 20px auto 0 auto; /* Ajusta los márgenes para centrar horizontalmente */
 position: relative; /* Cambia de absolute a relative para evitar que se superponga */
 top: unset; /* Elimina la posición fija */
 left: unset; /* Elimina la posición fija */
@@ -77,7 +77,7 @@ justify-content: center;
 align-items: center;
 background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
 border-radius: 8px; /* Bordes redondeados */
-padding: 10px; /* Espaciado interno */
+padding: 4px; /* Espaciado interno */
 max-width: 100%; /* Limita el ancho del menú */
 text-align: left;
 }

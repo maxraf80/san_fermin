@@ -124,7 +124,7 @@ text-decoration: underline;
   background: rgba(255, 255, 255, 0.1); /* Blanco transparente */
   padding: 1em 2em;
   border-radius: 12px;
-  border: 1px solid #c5c7d0;
+  border: 1px solid #0c0c0d;
   display: inline-block;
   box-shadow: 0 2px 12px rgba(34, 51, 102, 0.05);
 }

@@ -112,6 +112,18 @@ footer .contacto p:nth-child(5) {
 text-decoration: underline;
 }
 
+.texto-encabezado {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #223366;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.2px;
+  line-height: 1.3;
+}
+
+
 footer .contacto p {
 font-size: 0.85rem;
 line-height: 1.4;

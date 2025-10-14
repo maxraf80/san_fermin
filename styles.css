@@ -462,3 +462,21 @@ footer .contacto h3 {
     max-width: 100%;
   }
 }
+
+.formulario .aviso {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.formulario .aviso a {
+  color: #0078d7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.formulario .aviso a:hover {
+  text-decoration: underline;
+  color: #005fa3;
+}

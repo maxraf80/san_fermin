@@ -45,7 +45,7 @@
 
     <section class="fila">
         <div class="col-2">
-            <form action="https://formsubmit.co/hello@capitalistchic.com" method="POST">
+            <form class="formulario" action="https://formsubmit.co/hello@capitalistchic.com" method="POST">
                 <label>
                     Nombre *:
                     <input type="text" name="name" required>
@@ -63,21 +63,22 @@
 
                 <label>
                     Información Adicional:
-                    <input type="textarea" name="info">
+                    <textarea name="info" rows="4"></textarea>
                 </label>
 
                 <button type="submit">Enviar</button>
-            <input type="hidden" name="_next" value="https://maxraf80.github.io/san_fermin/thanks.html">
-            <input type="hidden" name="_captcha" value="false">
-            </form>
 
+                <input type="hidden" name="_next" value="https://maxraf80.github.io/san_fermin/thanks.html">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
         </div>
     </section>
+
 
     <!-- Tercera franja horizontal: Pie de página -->
     <footer id="contacto" class="fila">
         <div class="contacto">
-            <h3>Contacta con nozotros</h3>
+            <h3>Contacta con nosotros</h3>
             <p>Para más información o para concertar una cita, no dudes en ponerte en contacto con nosotros:</p>
             <!--<p>Email: info@ejemplo.com</p>-->
             <p>Teléfono: +34 613 0000 30</p>

@@ -1,0 +1,49 @@
+# Activar motor de reescritura
+RewriteEngine On
+
+# Asegurar que se sirve siempre con HTTPS y sin www (opcional pero recomendado)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://renovarcarnetdeconducirmadridbarato.com/$1 [L,R=301]
+
+# --------------------------------------------
+# 🔹 REDIRECCIONES DE URLS SIN EXTENSIÓN
+# --------------------------------------------
+
+# /citas → /citas.html
+RewriteRule ^citas$ citas.html [L,R=301]
+
+# /legal → /legal.html
+RewriteRule ^legal$ legal.html [L,R=301]
+
+# /privacidad → /privacidad.html
+RewriteRule ^privacidad$ privacidad.html [L,R=301]
+
+# /thanks → /thanks.html
+RewriteRule ^thanks$ thanks.html [L,R=301]
+
+# --------------------------------------------
+# 🔹 OPCIONAL: Hacer que sin extensión funcione sin cambiar la URL visible
+# (solo descomenta si prefieres que /citas muestre citas.html sin redirigir)
+# --------------------------------------------
+# RewriteRule ^citas$ citas.html [L]
+# RewriteRule ^legal$ legal.html [L]
+# RewriteRule ^privacidad$ privacidad.html [L]
+# RewriteRule ^thanks$ thanks.html [L]
+
+# --------------------------------------------
+# 🔹 OPCIONAL: Evitar errores 404 por mayúsculas/minúsculas o barra final
+# --------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# --------------------------------------------
+# 🔹 CABECERAS BÁSICAS DE SEGURIDAD (opcional)
+# --------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>

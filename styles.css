@@ -1,52 +1,66 @@
+/* ============================================================
+   🩺 Emedical Madrid — Estilos principales optimizados
+   Autor: Desyuno Web
+   Última revisión: Octubre 2025
+============================================================ */
+
 /* --------------------------
-   🔹 FUENTES LOCALES
+   🔹 FUENTES LOCALES OPTIMIZADAS
 --------------------------- */
+/* Se incluye font-display: swap para evitar bloqueo del renderizado */
 @font-face {
   font-family: 'Poppins';
   src: url('resources/Poppins/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
   font-family: 'Poppins';
   src: url('resources/Poppins/Poppins-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
   font-family: 'Poppins';
   src: url('resources/Poppins/Poppins-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
   font-family: 'Poppins';
   src: url('resources/Poppins/Poppins-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 /* --------------------------
-   🔹 ESTILOS GENERALES
+   🔹 RESETEO Y BASE
 --------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   line-height: 1.6;
-  background-image: url('resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: url('resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.jpg') center/cover fixed no-repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* --------------------------
@@ -54,18 +68,16 @@ body {
 --------------------------- */
 .boton-llamar {
   display: inline-block;
-  margin-left: 4.5em;
-  margin-top: 1em;
+  margin: 1em 0 0 4.5em;
   padding: 10px 18px;
   background-color: #e3a426;
-  color: white;
+  color: #fff;
   text-decoration: none;
   border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: background-color 0.2s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.25s ease;
 }
-
 .boton-llamar:hover {
   background-color: #218838;
 }
@@ -74,53 +86,36 @@ body {
    🔹 HEADER
 --------------------------- */
 header {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   width: 100%;
-  padding-right: 0;
 }
-
 .col-logo {
-  flex: 1;
-  margin-left: 0;
-  margin-right: 10px;
-  margin-top: 20px;
+  margin: 20px 10px 0 0;
 }
-
 .col-logo img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
-
-.col {
-  flex: 1;
-  padding: 10px;
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
 }
 
 /* --------------------------
-   🔹 MENÚ
+   🔹 MENÚ DE NAVEGACIÓN
 --------------------------- */
 .menu {
-  margin: 20px auto 0 auto;
-  position: relative;
+  margin: 20px auto 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
-  padding: 4px;
+  padding: 6px 10px;
   max-width: 100%;
-  text-align: left;
 }
-
 .menu ul {
   display: flex;
   flex-direction: column;
@@ -128,22 +123,20 @@ header {
   margin: 0;
   padding: 0;
 }
-
 .menu a {
   text-decoration: underline;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-  font-weight: bold;
-  padding: 5px 10px;
-  transition: background 0.2s;
-  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-weight: 600;
   font-size: 1.2rem;
+  padding: 5px 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
   margin-bottom: 1em;
+  transition: background 0.2s ease-in-out;
 }
-
 .menu a:hover {
   background: #ddd;
   border-radius: 4px;
+  color: #000;
 }
 
 /* --------------------------
@@ -156,18 +149,14 @@ footer {
   text-align: left;
   margin-top: auto;
   font-size: 0.85rem;
-  line-height: 1;
 }
-
 footer h3 {
-  font-weight: bold;
+  font-weight: 600;
 }
-
 footer a {
   color: #fff;
   text-decoration: underline;
 }
-
 footer .contacto p:nth-child(3),
 footer .contacto p:nth-child(4),
 footer .contacto p:nth-child(5) {
@@ -180,17 +169,16 @@ footer .contacto p:nth-child(5) {
 .texto-encabezado {
   text-align: center;
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 600;
   color: #223366;
   margin: 1.5em 0;
-  letter-spacing: 0.2px;
-  line-height: 1.3;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 1em 2em;
   border-radius: 12px;
   border: 1px solid #0c0c0d;
   display: inline-block;
-  box-shadow: 0 2px 12px rgba(34,51,102,0.05);
+  box-shadow: 0 2px 12px rgba(34, 51, 102, 0.05);
+  letter-spacing: 0.3px;
 }
 
 /* --------------------------
@@ -203,40 +191,33 @@ footer .contacto p:nth-child(5) {
   margin: 20px auto;
   max-width: 1200px;
 }
-
 .col-2 {
   flex: 1;
   padding: 15px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.95);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
 }
-
 .col-2 h2 {
   font-size: 1.5rem;
-  margin-bottom: 15px;
   color: #333;
+  margin-bottom: 0.8rem;
 }
-
 .col-2 h3 {
   font-size: 1.2rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
   color: #444;
+  margin: 1.2rem 0 0.8rem;
 }
-
 .col-2 p,
 .col-2 ul li {
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
-
 .col-2 ul {
   list-style: disc;
   padding-left: 20px;
-  margin-bottom: 15px;
 }
 
 /* --------------------------
@@ -246,32 +227,23 @@ footer .contacto p:nth-child(5) {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  width: 100px;
-  height: 100px;
-  padding: 0;
-  border: 0;
+  width: 90px;
+  height: 90px;
   background: transparent;
-  box-shadow: none;
-  border-radius: 0;
-  line-height: 0;
+  border: 0;
   cursor: pointer;
 }
-
 .wa-button img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
-
 @media (max-width: 480px) {
   .wa-button {
+    width: 60px;
+    height: 60px;
     bottom: 5px;
     right: 5px;
-    width: 60px;
-    height: 60px;
-  }
-  .wa-button img {
-    width: 60px;
-    height: 60px;
   }
 }
 
@@ -279,21 +251,18 @@ footer .contacto p:nth-child(5) {
    🔹 DISCLAIMER
 --------------------------- */
 .disclaimer {
-  background-color: #000;
+  background: #000;
   color: #fff;
   text-align: center;
   padding: 12px 16px;
   font-size: 0.85rem;
-  line-height: 1.4;
   width: 100%;
   box-sizing: border-box;
 }
-
 .disclaimer a {
   color: #fff;
   text-decoration: underline;
 }
-
 @media (max-width: 480px) {
   .disclaimer {
     font-size: 0.8rem;
@@ -308,42 +277,34 @@ footer .contacto p:nth-child(5) {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 400px;
+  max-width: 420px;
   margin: 0 auto;
   padding: 2rem;
   background: #f9f9fb;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-family: 'Poppins', sans-serif;
 }
-
 .formulario label {
-  display: flex;
-  flex-direction: column;
   font-weight: 500;
   color: #333;
 }
-
 .formulario input,
 .formulario textarea {
-  margin-top: 6px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
-
 .formulario input:focus,
 .formulario textarea:focus {
   border-color: #0078d7;
   box-shadow: 0 0 0 3px rgba(0,120,215,0.2);
   outline: none;
 }
-
 .formulario button {
   background: #0078d7;
-  color: white;
+  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   border: none;
@@ -352,95 +313,57 @@ footer .contacto p:nth-child(5) {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
 .formulario button:hover {
   background: #005fa3;
 }
-
 .formulario .aviso {
   font-size: 0.85rem;
   color: #555;
   text-align: center;
-  margin-top: 0.5rem;
 }
-
 .formulario .aviso a {
   color: #0078d7;
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
 }
-
 .formulario .aviso a:hover {
   text-decoration: underline;
   color: #005fa3;
 }
 
 /* --------------------------
-   🔹 MEDIA QUERIES RESPONSIVE
+   🔹 MEDIA QUERIES
 --------------------------- */
 @media (max-width: 480px) {
   body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
   .menu {
-    margin: 0 auto;
-    display: inline-block;
     width: 90%;
-    max-width: 450px;
-    justify-content: center;
     text-align: center;
   }
-
-  .menu ul {
-    align-items: center;
-  }
-
   .menu a {
-    text-align: center;
     display: inline-block;
   }
-
   .col-title h1,
   .col-title p {
     display: none;
   }
 }
-
 @media (min-width: 481px) {
   .col-title h1,
   .col-title p {
     display: block;
   }
 }
-
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  header,
+  footer {
     text-align: center;
   }
-
-  .col-title {
-    text-align: center;
-  }
-
   footer {
     margin-top: auto;
-    position: relative;
-    bottom: unset;
     width: 100%;
   }
 }

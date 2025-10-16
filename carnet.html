@@ -22,21 +22,24 @@
   <meta property="og:url" content="https://renovarcarnetdeconducirmadridbarato.com/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
-<link rel="icon" href="resources/Logo.png" type="image/x-icon">
+
   <!-- 🔹 Favicon -->
+  <link rel="icon" href="resources/Logo.png" type="image/x-icon">
   <link rel="icon" href="https://renovarcarnetdeconducirmadridbarato.com/resources/favicon.ico" type="image/x-icon">
 
-  <!-- 🔹 Google Fonts 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  -->
+  <!-- 🔹 Preload fuentes locales -->
+  <link rel="preload" href="resources/Poppins/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="resources/Poppins/Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin>
 
-  <!-- 🔹 CSS principal -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- 🔹 Preload imagen LCP -->
+  <link rel="preload" as="image" href="resources/ventana.jpeg">
 
-  <!-- 🔹 Datos estructurados Schema.org -->
-  <script type="application/ld+json">
+  <!-- 🔹 CSS principal diferido -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+  <!-- 🔹 JSON-LD (defer para no bloquear renderizado) -->
+  <script type="application/ld+json" defer>
   {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
@@ -93,6 +96,7 @@
   }
   </script>
 </head>
+
 
 <body>
   <header class="row">

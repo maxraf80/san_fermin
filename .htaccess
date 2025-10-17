@@ -26,10 +26,10 @@ RewriteRule ^thanks$ thanks.html [L,R=301]
 # 🔹 OPCIONAL: Hacer que sin extensión funcione sin cambiar la URL visible
 # (solo descomenta si prefieres que /citas muestre citas.html sin redirigir)
 # --------------------------------------------
-# RewriteRule ^citas$ citas.html [L]
-# RewriteRule ^legal$ legal.html [L]
-# RewriteRule ^privacidad$ privacidad.html [L]
-# RewriteRule ^thanks$ thanks.html [L]
+ RewriteRule ^citas$ citas.html [L]
+ RewriteRule ^legal$ legal.html [L]
+ RewriteRule ^privacidad$ privacidad.html [L]
+ RewriteRule ^thanks$ thanks.html [L]
 
 # --------------------------------------------
 # 🔹 OPCIONAL: Evitar errores 404 por mayúsculas/minúsculas o barra final

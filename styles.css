@@ -142,14 +142,20 @@ header {
 /* --------------------------
    🔹 FOOTER
 --------------------------- */
+/* ---------- FOOTER ---------- */
 footer {
-  background: #222;
-  color: #fff;
-  padding: 15px 10px;
-  text-align: center;
-  margin-top: auto;
-  font-size: 0.85rem;
+  width: 100%;                     /* se expande al 100 % del viewport */
+  display: flex;                   /* permite centrar sus hijos */
+  flex-direction: column;          /* mantiene el contenido en columna */
+  align-items: center;             /* centra horizontalmente cada hijo */
+  background: #222;                /* color de fondo */
+  color: #fff;                     /* color del texto */
+  padding: 15px 10px;              /* tu padding original */
+  margin-top: auto;                /* posiciona el footer en la parte inferior cuando el body es flex */
+  font-size: 0.85rem;              /* tamaño de fuente */
+  text-align: center;              /* centra el texto dentro de cada elemento hijo */
 }
+
 footer h3 {
   font-weight: 600;
 }

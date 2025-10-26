@@ -1,164 +1,381 @@
-/*  --- Valores de contraste de alta legibilidad  --- */
-:root {
-  --color-bg: #121212;          /* Fondo oscuro */
-  --color-text: #FFFFFF;        /* Texto claro */
-  --color-link: #FFEB3B;        /* Enlaces y CTA en amarillo */
-  --color-link-hover: #FFC107;  /* Hover */
-  --color-bg-secondary: #1F1F1F;/* Sección gris más oscuro */
-  --color-border: #303030;      /* Bordes */
+/* ============================================================
+   🩺 Emedical Madrid — Estilos principales optimizados
+   Autor: Desyuno Web
+   Última revisión: Octubre 2025
+============================================================ */
+
+/* --------------------------
+   🔹 FUENTES LOCALES OPTIMIZADAS
+--------------------------- */
+/* Se incluye font-display: swap para evitar bloqueo del renderizado */
+@font-face {
+  font-family: 'Poppins';
+  src: url('resources/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('resources/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('resources/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('resources/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-/*  --- Reset básico  --- */
+/* --------------------------
+   🔹 RESETEO Y BASE
+--------------------------- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: var(--color-text);
-  background: var(--color-bg);
+  font-family: 'Poppins', Arial, sans-serif;
   line-height: 1.6;
-}
-
-a {
-  color: var(--color-link);
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  color: var(--color-link-hover);
-  text-decoration: underline;
-}
-
-/*  --- Header  --- */
-.header {
-  background: var(--color-bg-secondary);
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo-img {
-  height: 48px;
-  width: auto;
-}
-
-/*  --- Navegación  --- */
-.nav-list {
-  list-style: none;
+  background: url('resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.jpg') center/cover fixed no-repeat;
+  min-height: 100vh;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --------------------------
+   🔹 BOTÓN DE LLAMADA
+--------------------------- */
+.boton-llamar {
+  display: inline-block;
+  margin: 1em 0 0 4.5em;
+  padding: 10px 18px;
+  background-color: #e3a426;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.25s ease;
+}
+.boton-llamar:hover {
+  background-color: #218838;
+}
+
+/* --------------------------
+   🔹 HEADER
+--------------------------- */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.col-logo {
+  margin: 20px 10px 0 0;
+}
+.col-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* --------------------------
+   🔹 MENÚ DE NAVEGACIÓN
+--------------------------- */
+.menu {
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  padding: 6px 10px;
+  max-width: 100%;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
+.menu a {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  margin-bottom: 1em;
+  transition: background 0.2s ease-in-out;
+}
+.menu a:hover {
+  background: #ddd;
+  border-radius: 4px;
+  color: #000;
+}
 
-.nav-link {
-  color: var(--color-text);
+/* --------------------------
+   🔹 FOOTER
+--------------------------- */
+/* ---------- FOOTER ---------- */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 15px 10px;
+  text-align: center;
+  margin-top: auto;
+  font-size: 0.85rem;
+  width: 100%;                     /* se expande al 100 % del viewport */
+  display: flex;                   /* permite centrar sus hijos */
+  flex-direction: column;          /* mantiene el contenido en columna */
+  align-items: center;             /* centra horizontalmente cada hijo */
+  background: #222;                /* color de fondo */
+  color: #fff;                     /* color del texto */
+  padding: 15px 10px;              /* tu padding original */
+  margin-top: auto;                /* posiciona el footer en la parte inferior cuando el body es flex */
+  font-size: 0.85rem;              /* tamaño de fuente */
+  text-align: center;              /* centra el texto dentro de cada elemento hijo */
+}
+
+footer h3 {
   font-weight: 600;
 }
-
-/*  --- Hero (con foto de fondo)  --- */
-.hero {
-  position: relative;
-  text-align: center;
-  color: var(--color-text);
-  overflow: hidden;
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+footer .contacto p:nth-child(3),
+footer .contacto p:nth-child(4),
+footer .contacto p:nth-child(5) {
+  text-decoration: underline;
 }
 
-.hero-image {
+/* --------------------------
+   🔹 TEXTO ENCABEZADO
+--------------------------- */
+.texto-encabezado {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #223366;
+  margin: 1.5em 0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1em 2em;
+  border-radius: 12px;
+  border: 1px solid #0c0c0d;
+  display: inline-block;
+  box-shadow: 0 2px 12px rgba(34, 51, 102, 0.05);
+  letter-spacing: 0.3px;
+}
+
+/* --------------------------
+   🔹 FILAS Y COLUMNAS
+--------------------------- */
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+.col-2 {
+  flex: 1;
+  padding: 15px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+.col-2 h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+.col-2 h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin: 1.2rem 0 0.8rem;
+}
+.col-2 p,
+.col-2 ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.col-2 ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* --------------------------
+   🔹 BOTÓN WHATSAPP
+--------------------------- */
+.wa-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 90px;
+  height: 90px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.wa-button img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
-  filter: brightness(0.6);
+  height: auto;
   display: block;
 }
+@media (max-width: 480px) {
+  .wa-button {
+    width: 60px;
+    height: 60px;
+    bottom: 5px;
+    right: 5px;
+  }
+}
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
+/* --------------------------
+   🔹 DISCLAIMER
+--------------------------- */
+.disclaimer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.disclaimer a {
+  color: #fff;
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .disclaimer {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+  }
+}
+
+/* --------------------------
+   🔹 FORMULARIOS
+--------------------------- */
+.formulario {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 1rem;
+  max-width: 420px;
+  margin: 0 auto;
   padding: 2rem;
+  background: #f9f9fb;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-.hero-text h2,
-.hero-text p {
-  margin: 0.5rem 0;
+.formulario label {
+  font-weight: 500;
+  color: #333;
 }
-
-.cta-link {
-  display: inline-block;
-  background: var(--color-link);
-  color: var(--color-bg);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
+.formulario input,
+.formulario textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #0078d7;
+  box-shadow: 0 0 0 3px rgba(0,120,215,0.2);
+  outline: none;
+}
+.formulario button {
+  background: #0078d7;
+  color: #fff;
+  font-size: 1rem;
   font-weight: 600;
-  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
-
-.cta-link:hover,
-.cta-link:focus {
-  background: var(--color-link-hover);
+.formulario button:hover {
+  background: #005fa3;
 }
-
-/*  --- Secciones  --- */
-.section {
-  padding: 4rem 0;
-  background: var(--color-bg);
-}
-
-.services-list,
-.about {
-  list-style: disc inside;
-  padding-left: 1.5rem;
-}
-
-/*  --- Footer  --- */
-.footer {
-  background: var(--color-bg-secondary);
-  padding: 2rem 0;
-  color: var(--color-text);
-}
-
-.contact-info a,
-.social a {
-  color: var(--color-text);
-}
-
-/*  --- Floating WhatsApp  --- */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--color-link);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 200;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: transform 0.2s ease;
-}
-
-.whatsapp-float:hover,
-.whatsapp-float:focus {
-  transform: scale(1.1);
-}
-
-/*  --- Disclaimer  --- */
-.disclaimer {
-  background: var(--color-border);
-  color: var(--color-text);
-  text-align: center;
-  padding: 1rem 0;
+.formulario .aviso {
   font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+}
+.formulario .aviso a {
+  color: #0078d7;
+  font-weight: 500;
+  text-decoration: none;
+}
+.formulario .aviso a:hover {
+  text-decoration: underline;
+  color: #005fa3;
+}
+
+/* --------------------------
+   🔹 MEDIA QUERIES
+--------------------------- */
+@media (max-width: 480px) {
+  body {
+    justify-content: center;
+    align-items: center;
+  }
+  .menu {
+    width: 90%;
+    text-align: center;
+  }
+  .menu a {
+    display: inline-block;
+  }
+  .col-title h1,
+  .col-title p {
+    display: none;
+  }
+}
+@media (min-width: 481px) {
+  .col-title h1,
+  .col-title p {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  header,
+  footer {
+    text-align: center;
+  }
+  footer {
+    margin-top: auto;
+    width: 100%;
+  }
 }

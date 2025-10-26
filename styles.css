@@ -1,155 +1,164 @@
-/* ------------------------------------------------------------------
-   1️⃣  BODY  ----------------------------------------------------------------- */
+/*  --- Valores de contraste de alta legibilidad  --- */
+:root {
+  --color-bg: #121212;          /* Fondo oscuro */
+  --color-text: #FFFFFF;        /* Texto claro */
+  --color-link: #FFEB3B;        /* Enlaces y CTA en amarillo */
+  --color-link-hover: #FFC107;  /* Hover */
+  --color-bg-secondary: #1F1F1F;/* Sección gris más oscuro */
+  --color-border: #303030;      /* Bordes */
+}
+
+/*  --- Reset básico  --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 0;
-  font-family: “Inter”, sans-serif; /* fuente base */
-  font-weight: 400;
-  font-size: 16px;                 /* 100 %  (≈ 1rem) */
-  line-height: 1.4;
-  background: #fafafa;             /* color de fondo de la página */
-  color: #222;                     /* color de texto por defecto */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
 }
 
-/* ------------------------------------------------------------------
-   2️⃣  HEADER  ----------------------------------------------------------------- */
-header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;             /* centra el contenido del header */
-  background: #222;                /* fondo oscuro (opcional) */
-  color: #fff;                     /* texto blanco por defecto */
-}
-
-/* 2️⃣ 1️⃣  Contenedor “cuadro” logo + título -------------------------------- */
-.header-box {
-  width: 100%;
-  max-width: 1200px;              /* ancho máximo del bloque */
-  margin: 0 auto;                 /* centrar bloque dentro del header */
-  display: flex;
-  flex-direction: row;
-  align-items: center;             /* alinea verticalmente logo y texto */
-  justify-content: space-between;
-  padding: 20px 30px;              /* espacio interno */
-  background: #fff;                /* fondo claro → alto contraste */
-  color: #222;                     /* texto oscuro */
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* 2️⃣ 1️⃣ Logo ---------------------------------------------------- */
-.col-logo {
-  margin-right: 20px;
-}
-.col-logo img {
-  max-width: 120px;
-  height: auto;
-}
-
-/* 2️⃣ 1️⃣ Título y descripción ----------------------------------- */
-.col-title h1 {
-  margin: 0 0 0.4rem 0;
-  font-size: 2.2rem;
-  line-height: 1.1;
-}
-.col-title .texto-encabezado {
-  margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.4;
-}
-
-/* ------------------------------------------------------------------
-   3️⃣  MENÚ  ----------------------------------------------------------------- */
-.menu {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto 0;          /* márgenes automáticos, centrado horizontal */
-  display: flex;
-  justify-content: center;
-  background: rgba(0,0,0,0.6);   /* color semi‑transparente */
-  border-radius: 8px;
-  padding: 6px 10px;
-  box-sizing: border-box;
-  max-width: 100%;
-}
-.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;            /* permite que los items se ajusten en pantallas pequeñas */
-  justify-content: center;
-}
-.menu li {
-  margin: 0 20px;
-}
-.menu a {
-  color: #fff;
+a {
+  color: var(--color-link);
   text-decoration: none;
-  font-weight: 400;
-}
-.menu a:hover,
-.menu a:focus,
-.menu a:active {
-  color: #f1c40f;               /* color de hover */
 }
 
-/* ------------------------------------------------------------------
-   4️⃣  FOOTER  ----------------------------------------------------------------- */
-footer {
-  width: 100%;
+a:hover,
+a:focus {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/*  --- Header  --- */
+.header {
+  background: var(--color-bg-secondary);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+}
+
+/*  --- Navegación  --- */
+.nav-list {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;           /* centra el contenido del footer */
-  background: #222;              /* color de fondo del footer */
-  color: #fff;                   /* color del texto del footer */
-  padding: 15px 10px;
-  margin-top: auto;
-  font-size: 0.85rem;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/*  --- Hero (con foto de fondo)  --- */
+.hero {
+  position: relative;
   text-align: center;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  color: var(--color-text);
+  overflow: hidden;
 }
 
-/* ------------------------------------------------------------------
-   5️⃣  NAV (opcional, si lo usas) ------------------------------------- */
-nav ul {
+.hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(0.6);
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
   display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-nav li {
-  margin: 0 20px 0 0;
-}
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 400;
-}
-nav a:hover,
-nav a:focus,
-nav a:active {
-  color: #f1c40f;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-/* ------------------------------------------------------------------
-   6️⃣  Media queries (responsive) ------------------------------------- */
-@media (max-width: 768px) {
-  .header-box {
-    flex-direction: column;
-    align-items: flex-start;   /* alinea a la izquierda en pantallas pequeñas */
-    text-align: left;
-  }
-  .col-logo {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  .menu li {
-    margin: 0 10px;
-  }
+.hero-text h2,
+.hero-text p {
+  margin: 0.5rem 0;
+}
+
+.cta-link {
+  display: inline-block;
+  background: var(--color-link);
+  color: var(--color-bg);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.cta-link:hover,
+.cta-link:focus {
+  background: var(--color-link-hover);
+}
+
+/*  --- Secciones  --- */
+.section {
+  padding: 4rem 0;
+  background: var(--color-bg);
+}
+
+.services-list,
+.about {
+  list-style: disc inside;
+  padding-left: 1.5rem;
+}
+
+/*  --- Footer  --- */
+.footer {
+  background: var(--color-bg-secondary);
+  padding: 2rem 0;
+  color: var(--color-text);
+}
+
+.contact-info a,
+.social a {
+  color: var(--color-text);
+}
+
+/*  --- Floating WhatsApp  --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-link);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  transform: scale(1.1);
+}
+
+/*  --- Disclaimer  --- */
+.disclaimer {
+  background: var(--color-border);
+  color: var(--color-text);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.85rem;
 }

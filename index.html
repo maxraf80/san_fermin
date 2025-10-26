@@ -29,10 +29,8 @@
   <link rel="icon" href="resources/Logo.png" type="image/x-icon">
 
   <!--  🔹 Preload fuentes locales  -->
-  <link rel="preload" href="resources/Poppins/Poppins-Regular.ttf" as="font" type="font/ttf"
-    crossorigin>
-  <link rel="preload" href="resources/Poppins/Poppins-Bold.ttf" as="font" type="font/ttf"
-    crossorigin>
+  <link rel="preload" href="resources/Poppins/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="resources/Poppins/Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin>
 
   <!--  🔹 Preload LCP image  -->
   <link rel="preload" as="image" href="resources/ventana.jpeg">
@@ -76,101 +74,99 @@
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens": "16:00",
-          "closes": "20:30"
+          "opens": "14:00",
+          "closes": "18:00"
         }
       ],
-      "makesOffer": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Renovación carnet de conducir", "description": "Renueva tu carnet de conducir en Madrid sin cita previa. Reconocimiento médico y psicotécnico oficial DGT." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Psicotécnicos para armas y oposiciones", "description": "Reconocimientos para armas, navegación, seguridad privada, PPP, deportes y oposiciones." } }
-      ],
-      "potentialAction": { "@type": "Action", "name": "Solicitar cita", "target": "https://renovarcarnetdeconducirmadridbarato.com/citas.html" }
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://renovarcarnetdeconducirmadridbarato.com/citas.html"
+        }
+      }
     }
   </script>
 
-  <!--  🔹 Analytics / Tracking  -->
+  <!--  🔹 Performance – preconnect a los CDNs de fuentes -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!--  🔹 Script de Google Analytics (ejemplo)  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script async>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXX');
   </script>
-
-  <!--  🔹 Otros  -->
-  <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars/css/OverlayScrollbars.min.css"
-    defer>
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars/js/OverlayScrollbars.min.js"
-    defer>
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars/js/jquery.overlayScrollbars.min.js"
-    defer>
-  </script>
-
 </head>
 
 <body>
-  <!--  Skip link for keyboard users  -->
-  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <!--  👉  Skip‑to‑content link (solo visible en el principio) -->
+  <a href="#main-content" class="skip-link" aria-label="Saltar al contenido principal">Saltar al contenido</a>
 
   <!--  🔹 Header  -->
-  <header class="header">
+  <header class="header" role="banner">
     <div class="container">
-      <a href="/" class="logo-link" aria-label="Ir a la página principal">
-        <img src="resources/logo-emedical.png" alt="Emedical Madrid – Centro médico autorizado por la DGT">
+      <a href="/" class="logo-link" aria-label="Ir a la página de inicio">
+        <img src="resources/Logo.png" alt="Emedical Madrid" class="logo-img">
       </a>
 
-      <nav aria-label="Menú principal">
+      <nav class="nav" aria-label="Menú principal">
         <ul class="nav-list">
-          <li><a href="citas.html" class="nav-link">Citas</a></li>
-          <li><a href="carnet.html" class="nav-link">Renovación carnet</a></li>
-          <li><a href="armas.html" class="nav-link">Certificados armas</a></li>
-          <li><a href="privacidad.html" class="nav-link">Privacidad</a></li>
+          <li><a href="citas.html" class="nav-link">Cita Previa</a></li>
+          <li><a href="citas.html" class="nav-link">Renovación sin cita</a></li>
         </ul>
       </nav>
-
-      <a href="https://wa.me/34613000030" class="cta" target="_blank" rel="noopener">
-        <img src="resources/whatsapp.png" alt="WhatsApp – Pide tu cita" width="24" height="24">
-      </a>
     </div>
   </header>
 
-  <main id="main-content">
-    <!--  🔹 Sección de presentación  -->
-    <section class="hero">
-      <div class="container">
-        <h2 class="visually-hidden">Renovación del carnet de conducir</h2>
-        <p class="hero-text">Renueva tu carnet de conducir en Madrid sin cita previa. En nuestro centro autorizado por la DGT podrás salir con la autorización provisional lista para conducir.</p>
+  <!--  🔹 WhatsApp floating button (fixed en todas las posiciones) -->
+  <a href="https://wa.me/34613000030"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="WhatsApp – pedir cita">
+    <img src="resources/whatsapp.png" alt="WhatsApp – pedir cita" width="48" height="48">
+  </a>
+
+  <!--  🔹 Main  -->
+  <main id="main-content" class="main" role="main">
+    <!--  🔹 Hero con foto de fondo + imagen de contraste -->
+    <section class="hero" aria-label="Renovación de carnet de conducir sin esperas">
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <h2>Renueva tu carnet sin cita previa</h2>
+          <p>En <strong>Emedical Madrid</strong> garantizamos un proceso inmediato, sencillo y sin esperas.</p>
+          <a href="citas.html" class="cta-link">Solicitar cita</a>
+        </div>
+        <!-- Imagen de contraste (LCP) -->
+        <img src="resources/ventana.jpeg" alt="Coches en la carretera" class="hero-image" decoding="async">
       </div>
     </section>
 
-    <section class="services" aria-label="Servicios que ofrecemos">
+    <!--  🔹 Sección de Servicios -->
+    <section class="services" aria-label="Servicios ofrecidos">
       <div class="container">
         <h2>Servicios</h2>
         <ul class="services-list">
           <li>
-            <h3>Renovación de carnet de conducir</h3>
-            <p>Sin cita previa, rápido y económico. Reconocimientos médicos y psicotécnicos oficiales DGT.</p>
+            <h3>Psicotécnicos oficiales</h3>
+            <p>Rápidos, económicos y con resultados inmediatos.</p>
           </li>
           <li>
-            <h3>Psicotécnicos para armas y oposiciones</h3>
-            <p>Reconocimientos oficiales para armas, navegación, seguridad privada, PPP, deportes y oposiciones.</p>
+            <h3>Renovación sin cita</h3>
+            <p>En determinados horarios, sin necesidad de reservar.</p>
           </li>
           <li>
-            <h3>Renovación sin cita (en horarios de alta demanda)</h3>
-            <p>Disponibilidad en horarios específicos según la afluencia.</p>
+            <h3>Autoridad provisional</h3>
+            <p>Obtén la autorización provisional y conduce de inmediato.</p>
           </li>
         </ul>
-
-        <picture>
-          <source srcset="resources/premium_photo-1682123572176-9f5fac68d56b.avif" type="image/avif">
-          <img src="resources/premium_photo-1682123572176-9f5fac68d56b.avif"
-            alt="Certificado médico oficial DGT emitido en Emedical Madrid" decoding="async">
-        </picture>
       </div>
     </section>
 
+    <!--  🔹 Sobre nosotros -->
     <section class="about" aria-label="Información adicional">
       <div class="container">
         <h2>Sobre nosotros</h2>
@@ -201,6 +197,7 @@
     </div>
   </footer>
 
+  <!--  🔹 Aviso legal (disclaimer)  -->
   <div class="disclaimer" role="contentinfo" aria-label="Aviso legal">
     <p>
       Aviso: La protección de tus datos está garantizada por el RGPD. Lee la política de <a href="privacidad.html">Privacidad</a> y los

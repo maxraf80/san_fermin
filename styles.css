@@ -1,121 +1,193 @@
-/* ─────────────────────────────────────
-   1. Variables globales
-   ───────────────────────────────────── */
+/* ============================================================
+   🩺 Emedical Madrid – Estilos principales optimizados
+   Autor: Desyuno Web • Última revisión: Octubre 2025
+============================================================ */
+
+/* ------------------------------------------------------------------------
+   1. Variables
+------------------------------------------------------------------------ */
 :root{
-    --clr-primary:#e3a426;
-    --clr-primary-h:#d99d0e;
-    --clr-success:#218838;
-    --clr-bg-body:#1c1c1c;
-    --clr-bg-card:rgba(255,255,255,.95);
-    --clr-bg-footer:#222;
-    --clr-fg-title:#223366;
-    --clr-fg-text:#555;
-    --clr-fg-link:#fff;
-    --clr-fg-link-h:#000;
-    --ff-base:'Poppins',Arial,sans-serif;
-    --sp-xxs:.25rem;
-    --sp-xs:.5rem;
-    --sp-sm:1rem;
-    --sp-md:1.5rem;
-    --sp-lg:2rem;
-    --sp-xl:3rem;
+  /* Paleta de colores */
+  --clr-primary:#e3a426;
+  --clr-primary-h:#d99d0e;
+  --clr-success:#218838;
+  --clr-bg-body:#1c1c1c;
+  --clr-bg-card:rgba(255,255,255,.95);
+  --clr-bg-footer:#222;
+  --clr-fg-title:#223366;
+  --clr-fg-text:#555;
+  --clr-fg-link:#fff;
+  --clr-fg-link-h:#000;
+
+  /* Tipografía */
+  --ff-base:'Poppins',Arial,sans-serif;
+
+  /* Espaciados */
+  --sp-xxs:.25rem;
+  --sp-xs:.5rem;
+  --sp-sm:1rem;
+  --sp-md:1.5rem;
+  --sp-lg:2rem;
+  --sp-xl:3rem;
 }
 
-/* ─────────────────────────────────────
+/* ------------------------------------------------------------------------
    2. Reset y base
-   ───────────────────────────────────── */
+------------------------------------------------------------------------ */
 *,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    margin:0;
-    font-family:var(--ff-base);
-    line-height:1.6;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    background:var(--clr-bg-body) url('resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.jpg')
-                center/cover no-repeat fixed;
-    color:var(--clr-fg-text);
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
+  margin:0;
+  font-family:var(--ff-base);
+  line-height:1.6;
+  background:var(--clr-bg-body) url('resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.jpg') center/cover fixed no-repeat;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  color:var(--clr-fg-text);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
 
-/* ─────────────────────────────────────
-   3. Hero
-   ───────────────────────────────────── */
+/* ------------------------------------------------------------------------
+   3. Menú (sticky)
+------------------------------------------------------------------------ */
+.main-nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(0,0,0,.8);
+  backdrop-filter:blur(3px);
+}
+.nav-list{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  list-style:none;
+  margin:0;
+  padding:.75rem 1rem;
+}
+.nav-list a{
+  color:var(--clr-fg-link);
+  text-decoration:none;
+  font-weight:600;
+  padding:.4rem 1rem;
+  margin:0 .25rem;
+  border-radius:4px;
+  transition:.2s;
+}
+.nav-list a:hover{background:#ddd;color:#000}
+
+/* ------------------------------------------------------------------------
+   4. Hero
+------------------------------------------------------------------------ */
 .hero{
-    position:relative;display:flex;align-items:center;
-    justify-content:center;height:70vh;min-height:500px;
+  position:relative;
+  height:70vh;
+  min-height:500px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
 }
 .hero__bg{
-    position:absolute;inset:0;
-    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-                url('resources/hero-banner.jpg') center/cover no-repeat;
-    z-index:-1;filter:brightness(.8);
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+              url('resources/ventana.jpeg') center/cover no-repeat;
+  z-index:-1;
+  filter:brightness(.8);
 }
-.hero__content{ text-align:center;color:#fff;max-width:90%;}
-.hero__content h1{font-size:3rem; margin:0;}
-.hero__content p{font-size:1.3rem;margin:0.5rem 0 1.4rem;}
-.btn{background:var(--clr-primary);color:#fff;padding:.8rem 1.6rem;
-     border-radius:6px;text-decoration:none;transition:.2s;}
-.btn:hover{background:var(--clr-primary-h);}
+.hero__content{
+  max-width:90%;
+  z-index:1;
+}
+.hero__content h1{
+  font-size:3rem;
+  margin-bottom:.5rem;
+}
+.hero__content h1 span{color:var(--clr-primary)}
+.hero__content p{font-size:1.3rem;margin-bottom:1rem}
+.hero__content .btn{background:var(--clr-primary);color:#fff;padding:.8rem 1.6rem;border-radius:4px;text-decoration:none;}
+.hero__content .btn:hover{background:var(--clr-primary-h);}
 
-/* ─────────────────────────────────────
-   4. Navegación
-   ───────────────────────────────────── */
-.main-nav{position:sticky;top:0;background:rgba(0,0,0,.8);
-          backdrop-filter:blur(3px);padding:.5rem .5rem;z-index:100;}
-.nav-list{display:flex;justify-content:center;gap:2rem;}
-.nav-list a{color:var(--clr-fg-link);text-transform:uppercase;
-            font-size:.9rem;font-weight:600;transition:.2s;
-            border-bottom:2px solid transparent;}
-.nav-list a:hover{border-color:var(--clr-primary);}
+/* ------------------------------------------------------------------------
+   5. Botón de llamada
+------------------------------------------------------------------------ */
+.boton-llamar{
+  display:inline-block;
+  margin:.5rem 1rem;
+  padding:.8rem 1.6rem;
+  background:var(--clr-primary);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.25s;
+}
+.boton-llamar:hover{background:var(--clr-primary-h)}
 
-/* ─────────────────────────────────────
-   5. Servicios (tarjetas)
-   ───────────────────────────────────── */
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-          gap:var(--sp-lg);margin:var(--sp-xl) auto;}
-.card{background:var(--clr-bg-card);border-radius:8px;
-      box-shadow:0 4px 12px rgba(0,0,0,.1);
-      padding:var(--sp-lg);text-align:center;}
-.card img{height:48px;width:auto;margin-bottom:var(--sp-sm);}
-.card h4{margin:.5rem 0;font-size:1.1rem;color:var(--clr-fg-title);}
-.card p{font-size:.95rem;color:var(--clr-fg-text);}
+/* ------------------------------------------------------------------------
+   6. Tarjetas de servicio
+------------------------------------------------------------------------ */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:var(--sp-lg);
+  margin:var(--sp-xl) auto;
+  padding:var(--sp-lg);
+}
+.card{
+  background:var(--clr-bg-card);
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+  padding:1.5rem;
+  text-align:center;
+}
+.card img{height:48px;width:auto;margin-bottom:1rem;}
+.card h4{font-size:1.2rem;margin-bottom:.5rem;color:var(--clr-fg-title);}
+.card p{font-size:.95rem;line-height:1.4;}
 
-/* ─────────────────────────────────────
-   6. Botón de llamada
-   ───────────────────────────────────── */
-.boton-llamar{background:var(--clr-primary);color:#fff;
-               padding:1rem 1.8rem;border:none;border-radius:8px;
-               font-weight:600;cursor:pointer;transition:.25s;}
-.boton-llamar:hover{background:var(--clr-primary-h);}
-
-/* ─────────────────────────────────────
-   7. Whatsapp button
-   ───────────────────────────────────── */
-.wa-button{position:fixed;bottom:20px;right:20px;width:70px;height:70px;
-           background:var(--clr-success);border:none;cursor:pointer;transition:.2s;}
-.wa-button:hover{background:#1d6c47;}
-.wa-button img{width:100%;height:auto;display:block;}
-
-/* ─────────────────────────────────────
-   8. Footer
-   ───────────────────────────────────── */
-.site-footer{display:flex;flex-wrap:wrap;gap:var(--sp-lg);
-             padding:var(--sp-lg) var(--sp-xs);
-             background:var(--clr-bg-footer);color:var(--clr-fg-footer);}
-.f-col{flex:1 1 200px;}
+/* ------------------------------------------------------------------------
+   7. Footer
+------------------------------------------------------------------------ */
+.site-footer{
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--sp-lg);
+  background:var(--clr-bg-footer);
+  color:var(--clr-fg-link);
+  padding:var(--sp-lg);
+  text-align:center;
+}
+.f-col{flex:1 1 250px;}
 .f-col a{color:var(--clr-fg-link);text-decoration:underline;}
 .f-col a:hover{color:var(--clr-fg-link-h);}
+.f-col h3{font-weight:600;margin-bottom:.5rem}
 
-/* ─────────────────────────────────────
-   9. Responsive
-   ───────────────────────────────────── */
-@media (max-width: 768px){
-    .hero__content h1{font-size:2.2rem;}
-    .services{grid-template-columns:1fr;}
-    .nav-list{gap:1rem;}
+/* ------------------------------------------------------------------------
+   8. Disclaimer
+------------------------------------------------------------------------ */
+.disclaimer{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:var(--sp-sm) var(--sp-md);
+  font-size:.85rem;
 }
-@media (max-width: 480px){
-    .hero{height:55vh;}
+.disclaimer a{color:#fff;text-decoration:underline;}
+.disclaimer a:hover{color:#bbb;}
+
+/* ------------------------------------------------------------------------
+   9. Media queries
+------------------------------------------------------------------------ */
+@media (max-width:480px){
+  body{justify-content:center;align-items:center}
+  .hero__content h1{font-size:2.2rem}
+  .services{grid-template-columns:1fr}
+}
+@media (min-width:481px){
+  .hero__content h1{font-size:3rem}
 }

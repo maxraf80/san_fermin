@@ -34,7 +34,7 @@
 <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="styles.css"></noscript>
 
-<!-- 🔹 JSON-LD (defer para no bloquear renderizado) -->
+<!-- 🔹 JSON‑LD (defer para no bloquear renderizado) -->
 <script type="application/ld+json" defer>
 {
   "@context": "https://schema.org",
@@ -74,17 +74,45 @@
     }
   ],
   "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Renovación carnet de conducir", "description": "Renueva tu carnet de conducir en Madrid sin cita previa. Reconocimiento médico y psicotécnico oficial DGT." } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Certificados médicos oficiales", "description": "Certificados médicos y psicotécnicos válidos para oposiciones, seguridad y licencias." } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Licencia de armas", "description": "Reconocimiento médico y psicológico para licencias de armas tipo A, B, C, D, E y F." } }
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name":"Renovación carnet de conducir",
+        "description":"Renueva tu carnet de conducir en Madrid sin cita previa. Reconocimiento médico y psicotécnico oficial DGT. Puedes traer tu propia foto; en caso contrario, nuestro equipo la tomará con la calidad y los requisitos oficiales que exige la DGT.",
+        "serviceType":"Personal photo allowed",
+        "additionalProperty": [
+          {
+            "name": "Bring own photo",
+            "value": "Allowed"
+          }
+        ]
+      }
+    },
+    {
+      "@type":"Offer",
+      "itemOffered":{
+        "@type":"Service",
+        "name":"Certificados médicos oficiales",
+        "description":"Certificados médicos y psicotécnicos válidos para oposiciones, seguridad y licencias."
+      }
+    },
+    {
+      "@type":"Offer",
+      "itemOffered":{
+        "@type":"Service",
+        "name":"Licencia de armas",
+        "description":"Reconocimiento médico y psicológico para licencias de armas tipo A, B, C, D, E y F."
+      }
+    }
   ],
-  "accreditation": "Centro médico autorizado por la DGT",
-  "potentialAction": {
-    "@type": "ContactAction",
-    "target": "https://wa.me/34613000030",
-    "name": "Solicitar cita para psicotécnico"
+  "accreditation":"Centro médico autorizado por la DGT",
+  "potentialAction":{
+    "@type":"ContactAction",
+    "target":"https://wa.me/34613000030",
+    "name":"Solicitar cita para psicotécnico"
   },
-  "sameAs": [
+  "sameAs":[
     "https://www.instagram.com/emedicalmadrid",
     "https://www.facebook.com/emedicalmadrid",
     "https://maps.google.com/?q=Emedical+Madrid"

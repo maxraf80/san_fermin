@@ -1,178 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- 🔹 SEO principal (cada página debe cambiar título y descripción) -->
-  <title><!-- Colocar título específico de la página aquí --></title>
-  <meta name="description" content="<!-- Colocar descripción específica de la página aquí -->">
-  <meta name="keywords" content="renovar carnet conducir Madrid, psicotécnico Madrid, certificado médico conducir, reconocimiento médico DGT, centro psicotécnico Usera">
-  <meta name="author" content="Desyuno Web">
+  <title>Solicitud enviada | Te contactamos en breve · Emedical Madrid</title>
+  <meta name="description" content="Hemos recibido tu solicitud. En breve te contactamos para confirmar tu cita en Emedical Madrid (Usera / San Fermín). Si lo necesitas, llámanos o escríbenos por WhatsApp/Telegram." />
+  <link rel="canonical" href="https://renovarcarnetdeconducirmadridbarato.com/thanks" />
 
-  <!-- 🔹 Canonical -->
-  <link rel="canonical" href="<!-- URL canónica de la página -->">
+  <!-- Robots: página de gracias -->
+  <meta name="robots" content="noindex, nofollow" />
 
-  <!-- 🔹 Robots (solo noindex para páginas como gracias.html) -->
-  <meta name="robots" content="<!-- index, follow o noindex, nofollow según corresponda -->">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Solicitud enviada | Emedical Madrid" />
+  <meta property="og:description" content="Hemos recibido tu solicitud. Te contactamos en breve para confirmar tu cita." />
+  <meta property="og:image" content="https://renovarcarnetdeconducirmadridbarato.com/resources/logo-emedical.png" />
+  <meta property="og:url" content="https://renovarcarnetdeconducirmadridbarato.com/thanks" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
 
-  <!-- 🔹 Open Graph para redes sociales -->
-  <meta property="og:title" content="<!-- Título OG de la página -->">
-  <meta property="og:description" content="<!-- Descripción OG de la página -->">
-  <meta property="og:image" content="https://renovarcarnetdeconducirmadridbarato.com/resources/logo-emedical.png">
-  <meta property="og:url" content="<!-- URL OG de la página -->">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_ES">
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
 
-  <!-- 🔹 Favicon -->
-  <link rel="icon" href="resources/Logo.png" type="image/x-icon">
-  <link rel="icon" href="https://renovarcarnetdeconducirmadridbarato.com/resources/favicon.ico" type="image/x-icon">
-
-  <!-- 🔹 Preload fuentes locales (Poppins .ttf) -->
-  <link rel="preload" href="resources/Poppins/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="resources/Poppins/Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin>
-
-  <!-- 🔹 Preload imagen principal (LCP) -->
-  <link rel="preload" as="image" href="resources/ventana.jpeg">
-
-  <!-- 🔹 CSS principal diferido -->
-  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="styles.css"></noscript>
-
-  <!-- 🔹 JSON-LD deferido -->
-  <script type="application/ld+json" defer>
+  <!-- JSON-LD: WebPage (simple y limpio para THANKS) -->
+  <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Emedical Madrid",
-    "image": "https://renovarcarnetdeconducirmadridbarato.com/resources/logo-emedical.png",
-    "url": "https://renovarcarnetdeconducirmadridbarato.com/",
-    "priceRange": "€",
-    "medicalSpecialty": "OccupationalMedicine",
-    "telephone": "+34 613 000 030",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Calle de la Mezquita 5",
-      "addressLocality": "Madrid",
-      "addressRegion": "Madrid",
-      "postalCode": "28041",
-      "addressCountry": "ES"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 40.367862,
-      "longitude": -3.696974
-    },
-    "areaServed": ["Madrid", "Usera", "San Fermín", "Carabanchel", "Villaverde", "Aluche"],
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "10:00",
-        "closes": "13:30"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "16:00",
-        "closes": "20:30"
-      }
-    ],
-    "makesOffer": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Renovación carnet de conducir", "description": "Renueva tu carnet de conducir en Madrid sin cita previa. Reconocimiento médico y psicotécnico oficial DGT." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Certificados médicos oficiales", "description": "Certificados médicos y psicotécnicos válidos para oposiciones, seguridad y licencias." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Licencia de armas", "description": "Reconocimiento médico y psicológico para licencias de armas tipo A, B, C, D, E y F." } }
-    ],
-    "accreditation": "Centro médico autorizado por la DGT",
-    "potentialAction": {
-      "@type": "ContactAction",
-      "target": "https://wa.me/34613000030",
-      "name": "Solicitar cita para psicotécnico"
-    },
-    "sameAs": [
-      "https://www.instagram.com/emedicalmadrid",
-      "https://www.facebook.com/emedicalmadrid",
-      "https://maps.google.com/?q=Emedical+Madrid"
-    ]
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "@id":"https://renovarcarnetdeconducirmadridbarato.com/thanks#webpage",
+    "url":"https://renovarcarnetdeconducirmadridbarato.com/thanks",
+    "name":"Solicitud enviada | Emedical Madrid",
+    "inLanguage":"es-ES",
+    "isPartOf":{"@id":"https://renovarcarnetdeconducirmadridbarato.com/#website"},
+    "about":{"@id":"https://renovarcarnetdeconducirmadridbarato.com/#business"}
   }
   </script>
+
+  <script defer src="https://cdn.overtracking.com/t/tl9uRKMgNGUSttjUG/"></script>
 </head>
 
-
-
-
 <body>
-    <!-- HEADER -->
-    <header class="row">
-        <div class="col-logo">
-            <a href="index.html">
-                <img src="resources/logo-emedical.png" alt="Logo de Emedical Madrid, centro médico autorizado para psicotécnicos y renovación del carnet de conducir en Usera, Madrid">
-            </a>
-        </div>
-        <div class="col-title">
-            <h1>Emedical Madrid</h1>
-            <p class="texto-encabezado">Centro autorizado de psicotécnicos y certificados médicos en Madrid</p>
 
-            <!-- MENU -->
-            <nav class="menu">
-                <ul>
-                    <li><a href="carnet.html">Carnet de conducir</a></li>
-                    <li><a href="psicotecnicos.html">Psicotécnicos y certificados</a></li>
-                    <li><a href="citas.html" style="font-weight:bold; text-decoration: underline;">Pide una cita</a></li>
-                </ul>
-            </nav>
+<header class="row">
+  <div class="col-logo">
+    <a href="index.html" aria-label="Ir a inicio">
+      <img src="resources/logo-emedical.png"
+           alt="Logo de Emedical Madrid, centro médico en Usera (Madrid)">
+    </a>
+  </div>
 
-            <!-- BOTÓN DE LLAMADA -->
-            <a href="tel:613000030" class="boton-llamar">📞 Llámanos al 613 0000 30</a>
-        </div>
-    </header>
+  <div class="col-title">
+    <h1>Emedical Madrid</h1>
+    <p class="texto-encabezado">Centro autorizado · Usera / San Fermín · Madrid</p>
 
-    <!-- SECCIÓN PRINCIPAL -->
-    <section class="fila">
-        <div class="col-2">
-            <section>
-                <h2><strong>Formulario recibido con éxito</strong></h2>
-                <p>Gracias por confiar en <strong>Emedical Madrid</strong> para tus necesidades de
-                    <strong>psicotécnicos</strong> y certificados médicos oficiales. Nos complace informarte que tu
-                    solicitud ha sido recibida con éxito.</p>
-                </ul>
-                
-                <p>Nos pondremos en contacto contigo a la mayor brevedad posible para confirmar los detalles de tu cita
-                    o para proporcionarte cualquier información adicional que puedas necesitar.</p>
-                
-                    <p>Si tienes alguna pregunta o necesitas asistencia inmediata, no dudes en llamarnos al <a
-                        href="tel:+34613000030" aria-label="Llamar a Emedical Madrid">+34 613 000 030</a>.</p>
+    <!-- MENÚ UNIFICADO -->
+    <nav class="menu" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="renovar-carnet-conducir-madrid.html">Renovar carnet</a></li>
+        <li><a href="psicotecnico-madrid.html">Psicotécnico</a></li>
+        <li><a href="certificado-medico-dgt-madrid.html">Trámites DGT</a></li>
+        <li><a href="citas.html">Pedir cita</a></li>
+      </ul>
+    </nav>
 
-            </section>
-        </div>
-    </section>
+    <a href="tel:+34613000030" class="boton-llamar" aria-label="Llamar a Emedical Madrid">📞 613 000 030</a>
+  </div>
+</header>
 
-    <!-- PIE DE PÁGINA -->
-    <footer id="contact" class="fila">
-        <div class="contacto">
-            <h3>Contacta con nosotros</h3>
-            <p>Para más información o para concertar una <a href="citas.html"
-                    style="font-weight:bold; text-decoration: underline;">cita</a>, no dudes en ponerte en contacto
-                con nosotros.</p>
-            <p>Teléfono: <a href="tel:+34613000030" aria-label="Llamar a Emedical Madrid">+34 613 000 030</a></p>
-            <p><a href="https://maps.app.goo.gl/tFBQsxW2NMpnf48e8" target="_blank" rel="noopener noreferrer">Dirección:
-                    Calle de la Mezquita 5, 28041, Madrid</a></p>
-        </div>
-        <a class="wa-button wa-link" href="https://wa.me/34613000030" target="_blank" rel="noopener noreferrer">
-            <img src="resources/whatsapp.png" alt="WhatsApp Icon">
-        </a>
-    </footer>
+<main>
+  <section class="fila">
+    <div class="col-2">
 
-    <!-- DISCLAIMER -->
-    <div class="disclaimer" role="contentinfo" aria-label="Aviso legal">
-       <p>
-      Aviso: Para comprender con el RGPD (Reglamento General de Protección de Datos) y entender que tus datos están
-      seguros, debes leer y la política de <a href="privacidad.html">PRIVACIDAD</a> y los <a href="aviso-legal.html">AVISOS LEGALES</a>.
-      Esta web cumple con el RGPD, así que todo está protegido y amparado por la ley. El uso de la web implica la aceptación
-      de las condiciones expuestas en el aviso legal y la política de privacidad.
-      Esta web NO USA COOKIES.
-    </p>
+      <h2><strong>Formulario recibido con éxito</strong></h2>
+
+      <p>
+        Gracias por contactar con <strong>Emedical Madrid</strong>. Hemos recibido tu solicitud y
+        <strong>te contactaremos lo antes posible</strong> para confirmar los detalles.
+      </p>
+
+      <div style="padding:16px; border:1px solid rgba(0,0,0,.10); border-radius:10px; margin: 16px 0;">
+        <h2 style="margin-top:0;">¿Necesitas respuesta rápida?</h2>
+        <p style="margin: 8px 0 12px;">
+          Si quieres confirmación inmediata o tienes una duda urgente, contáctanos por aquí:
+        </p>
+        <p style="display:flex; flex-wrap:wrap; gap:10px; margin:0;">
+          <a class="boton-llamar" href="tel:+34613000030">📞 Llamar</a>
+          <a class="boton-llamar" href="https://wa.me/34613000030" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+          <a class="boton-llamar" href="https://t.me/34613000030" target="_blank" rel="noopener noreferrer">✈️ Telegram</a>
+        </p>
+      </div>
+
+      <p>
+        Si quieres volver a la página de cita:
+        <a href="citas.html"><strong>pedir cita</strong></a>.
+      </p>
+
     </div>
+  </section>
+</main>
+
+<footer>
+  <h3>Contacto</h3>
+  <p>Teléfono: <a href="tel:+34613000030">+34 613 000 030</a></p>
+  <p>
+    <a href="https://maps.app.goo.gl/tFBQsxW2NMpnf48e8" target="_blank" rel="noopener noreferrer">
+      Dirección: Calle de la Mezquita 5, 28041 Madrid (Usera / San Fermín)
+    </a>
+  </p>
+</footer>
+
+<!-- BOTONES FLOTANTES -->
+<a class="wa-button" href="https://wa.me/34613000030" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <img src="resources/whatsapp.png" alt="WhatsApp Emedical Madrid" loading="lazy">
+</a>
+
+<a class="tg-button" href="https://t.me/34613000030" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+  <img src="resources/Telegram_logo.svg" alt="Telegram Emedical Madrid" loading="lazy">
+</a>
+
+<!-- FRANJA NEGRA RGPD -->
+<div class="disclaimer" role="contentinfo" aria-label="Aviso legal RGPD">
+  <p>
+    Aviso: Para comprender con el RGPD (Reglamento General de Protección de Datos) y entender que tus datos están
+    seguros, debes leer la política de
+    <a href="privacidad.html"><strong>PRIVACIDAD</strong></a>
+    y los
+    <a href="aviso-legal.html"><strong>AVISOS LEGALES</strong></a>.
+    Esta web cumple con el RGPD, así que todo está protegido y amparado por la ley.
+    El uso de la web implica la aceptación de las condiciones expuestas en el aviso legal y la política de privacidad.
+    Esta web NO USA COOKIES.
+  </p>
+</div>
+
 </body>
 </html>

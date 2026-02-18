@@ -1,5 +1,7 @@
 <!-- ===========================
 FILE: renovar-carnet-conducir-madrid.html
+Ruta producción: /renovar-carnet-conducir-madrid
+(GitHub: abrir como renovar-carnet-conducir-madrid.html)
 =========================== -->
 <!DOCTYPE html>
 <html lang="es">
@@ -9,6 +11,7 @@ FILE: renovar-carnet-conducir-madrid.html
 
   <title>Renovar carnet de conducir en Madrid | Precio y trámite DGT en 1 visita</title>
   <meta name="description" content="Renueva el carnet de conducir en Madrid (Usera / San Fermín) en una sola visita: psicotécnico, foto y tramitación telemática con la DGT. Precio claro. Llama o pide cita." />
+  <meta name="author" content="Desyuno Web" />
   <link rel="canonical" href="https://renovarcarnetdeconducirmadridbarato.com/renovar-carnet-conducir-madrid" />
 
   <!-- Open Graph -->
@@ -20,6 +23,11 @@ FILE: renovar-carnet-conducir-madrid.html
   <meta property="og:locale" content="es_ES" />
 
   <link rel="icon" href="resources/favicon.ico" type="image/x-icon" />
+
+  <!-- Preload fuentes locales -->
+  <link rel="preload" href="resources/Poppins/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="resources/Poppins/Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin>
+
   <link rel="stylesheet" href="styles.css" />
 
   <!-- JSON-LD: Página + Servicio + FAQ -->
@@ -67,13 +75,36 @@ FILE: renovar-carnet-conducir-madrid.html
           {
             "@type":"Question",
             "name":"¿Qué documentación necesito para renovar el carnet?",
-            "acceptedAnswer":{"@type":"Answer","text":"Normalmente necesitarás DNI/NIE en vigor y tu permiso de conducir. En casos especiales (pérdida, cambios de datos, etc.) te indicamos los pasos recomendados."}
+            "acceptedAnswer":{"@type":"Answer","text":"Normalmente necesitarás DNI/NIE en vigor y tu permiso de conducir. Si usas gafas o lentillas, ven con ellas."}
           },
           {
             "@type":"Question",
             "name":"¿Se puede renovar el carnet caducado?",
-            "acceptedAnswer":{"@type":"Answer","text":"Sí, en muchos casos se puede renovar aunque esté caducado. Lo importante es hacer el reconocimiento y la tramitación con la DGT. Si tu caso tiene particularidades, consúltanos por WhatsApp o teléfono."}
+            "acceptedAnswer":{"@type":"Answer","text":"Sí, en muchos casos se puede renovar aunque esté caducado. Si tu caso tiene particularidades, consúltanos por WhatsApp o teléfono."}
           }
+        ]
+      },
+      {
+        "@type":"MedicalBusiness",
+        "@id":"https://renovarcarnetdeconducirmadridbarato.com/#business",
+        "name":"Emedical Madrid",
+        "image":"https://renovarcarnetdeconducirmadridbarato.com/resources/logo-emedical.png",
+        "url":"https://renovarcarnetdeconducirmadridbarato.com/",
+        "priceRange":"€",
+        "telephone":"+34 613 000 030",
+        "address":{
+          "@type":"PostalAddress",
+          "streetAddress":"Calle de la Mezquita 5",
+          "addressLocality":"Madrid",
+          "addressRegion":"Madrid",
+          "postalCode":"28041",
+          "addressCountry":"ES"
+        },
+        "geo":{"@type":"GeoCoordinates","latitude":40.367862,"longitude":-3.696974},
+        "areaServed":["Madrid","Usera","San Fermín","Carabanchel","Villaverde","Aluche"],
+        "openingHoursSpecification":[
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"13:30"},
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"16:00","closes":"20:30"}
         ]
       }
     ]
@@ -106,12 +137,11 @@ FILE: renovar-carnet-conducir-madrid.html
       </ul>
     </nav>
 
-    <a href="tel:+34613000030" class="boton-llamar" aria-label="Llamar a Emedical Madrid">📞 613 000 030</a>
+    <a href="tel:+34613000030" class="boton-llamar">📞 613 000 030</a>
   </div>
 </header>
 
 <main>
-
 <section class="fila">
   <div class="col-2">
 
@@ -129,19 +159,11 @@ FILE: renovar-carnet-conducir-madrid.html
         <li><strong>Reconocimiento médico/psicotécnico:</strong> 30€</li>
         <li><strong>Tasas DGT (renovación):</strong> 25€ (según corresponda)</li>
       </ul>
-      <p style="margin:10px 0 0;">
-        ¿Quieres venir directo o reservar? <a href="citas.html"><strong>Pide cita aquí</strong></a> o llámanos.
-      </p>
       <p style="margin:12px 0 0; display:flex; flex-wrap:wrap; gap:10px;">
         <a class="boton-llamar" href="tel:+34613000030">📞 Llamar</a>
         <a class="boton-llamar" href="citas.html">📝 Pedir cita</a>
       </p>
     </div>
-
-    <img src="resources/ventana.jpeg"
-         alt="Centro médico en Usera (Madrid) para renovar el carnet de conducir"
-         style="width:100%; margin:20px 0; border-radius:8px;"
-         loading="lazy" />
 
     <h2>Qué necesitas traer</h2>
     <ul>
@@ -160,33 +182,25 @@ FILE: renovar-carnet-conducir-madrid.html
     </ol>
 
     <h2>Casos frecuentes</h2>
+
     <h3>Carnet caducado</h3>
     <p>En muchos casos puedes renovar aunque el carnet esté caducado. Si tu situación es especial, consúltanos antes por teléfono o WhatsApp.</p>
 
     <h3>Si has perdido el permiso o está deteriorado</h3>
-    <p>Hay soluciones según el caso. Te orientamos para que no des viajes innecesarios. Consulta la sección de <a href="certificado-medico-dgt-madrid.html"><strong>Trámites DGT</strong></a>.</p>
+    <p>Hay soluciones según el caso. Te orientamos para que no des viajes innecesarios. Consulta <a href="certificado-medico-dgt-madrid.html"><strong>Trámites DGT</strong></a>.</p>
+
+    <!-- ✅ MODIFICACIÓN: Enlace a CANJE -->
+    <h3>Permiso extranjero</h3>
+    <p>
+      Si necesitas orientación con un permiso extranjero, consulta:
+      <a href="canje-permiso-conducir-extranjero-madrid.html"><strong>Canje de permiso de conducir extranjero en Madrid</strong></a>.
+    </p>
 
     <h2>Zona y ubicación</h2>
     <p>
       Estamos en <strong>Calle de la Mezquita 5, 28041 Madrid</strong> (Usera / San Fermín).
       Atendemos a personas de Madrid y barrios cercanos como Carabanchel, Villaverde y Aluche.
     </p>
-    <p>
-      <a href="https://maps.google.com/?q=Calle+de+la+Mezquita+5,+28041,+Madrid" target="_blank" rel="noopener noreferrer">
-        Abrir ubicación en Google Maps
-      </a>
-    </p>
-
-    <div style="padding:16px; border:1px solid rgba(0,0,0,.10); border-radius:10px; margin: 18px 0;">
-      <h2 style="margin-top:0;">¿Quieres venir hoy?</h2>
-      <p style="margin: 8px 0 12px;">
-        Para evitar esperas, lo más rápido es contactarnos. Te confirmamos disponibilidad.
-      </p>
-      <p style="display:flex; flex-wrap:wrap; gap:10px; margin:0;">
-        <a class="boton-llamar" href="tel:+34613000030">📞 Llamar</a>
-        <a class="boton-llamar" href="citas.html">📝 Pedir cita</a>
-      </p>
-    </div>
 
     <h2 id="faq">Preguntas frecuentes</h2>
 
@@ -201,7 +215,6 @@ FILE: renovar-carnet-conducir-madrid.html
 
   </div>
 </section>
-
 </main>
 
 <footer>
@@ -214,43 +227,23 @@ FILE: renovar-carnet-conducir-madrid.html
   </p>
 </footer>
 
-<!-- BOTONES FLOTANTES -->
 <a class="wa-button" href="https://wa.me/34613000030" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
   <img src="resources/whatsapp.png" alt="WhatsApp Emedical Madrid" loading="lazy">
 </a>
-
 <a class="tg-button" href="https://t.me/34613000030" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
   <img src="resources/Telegram_logo.svg" alt="Telegram Emedical Madrid" loading="lazy">
 </a>
 
-<!-- FRANJA NEGRA RGPD -->
 <div class="disclaimer" role="contentinfo" aria-label="Aviso legal RGPD">
   <p>
     Aviso: Para comprender con el RGPD (Reglamento General de Protección de Datos) y entender que tus datos están
-    seguros, debes leer la política de 
-    <a href="privacidad.html"><strong>PRIVACIDAD</strong></a> 
-    y los 
+    seguros, debes leer la política de
+    <a href="privacidad.html"><strong>PRIVACIDAD</strong></a>
+    y los
     <a href="aviso-legal.html"><strong>AVISOS LEGALES</strong></a>.
     Esta web cumple con el RGPD, así que todo está protegido y amparado por la ley.
     El uso de la web implica la aceptación de las condiciones expuestas en el aviso legal y la política de privacidad.
     Esta web NO USA COOKIES.
-  </p>
-</div>
-
-
-<!-- BOTONES FLOTANTES -->
-<a class="wa-button" href="https://wa.me/34613000030" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-  <img src="resources/whatsapp.png" alt="WhatsApp Emedical Madrid" loading="lazy">
-</a>
-
-<a class="tg-button" href="https://t.me/34613000030" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-  <img src="resources/Telegram_logo.svg" alt="Telegram Emedical Madrid" loading="lazy">
-</a>
-
-<div class="disclaimer" role="contentinfo" aria-label="Aviso legal">
-  <p>
-    Esta web cumple con el RGPD y no utiliza cookies.
-    Consulta la <a href="privacidad.html">Política de Privacidad</a> y el <a href="aviso-legal.html">Aviso Legal</a>.
   </p>
 </div>
 

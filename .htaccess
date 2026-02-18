@@ -1,46 +1,47 @@
-# Activar motor de reescritura
+# ============================================================
+# Emedical Madrid - .htaccess (SEO + URLs limpias)
+# ============================================================
+
 RewriteEngine On
 
-# Asegurar que se sirve siempre con HTTPS y sin www (opcional pero recomendado)
-RewriteCond %{HTTPS} off [OR]
+# ------------------------------------------------------------
+# 1) Forzar HTTPS y quitar www
+# ------------------------------------------------------------
+RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
-RewriteRule ^(.*)$ https://renovarcarnetdeconducirmadridbarato.com/$1 [L,R=301]
+RewriteRule ^ https://renovarcarnetdeconducirmadridbarato.com%{REQUEST_URI} [L,R=301]
 
-# --------------------------------------------
-# 🔹 REDIRECCIONES DE URLS SIN EXTENSIÓN
-# --------------------------------------------
-
-# /citas → /citas.html
-RewriteRule ^citas$ citas.html [L,R=301]
-
-# /legal → /legal.html
-RewriteRule ^legal$ legal.html [L,R=301]
-
-# /privacidad → /privacidad.html
-RewriteRule ^privacidad$ privacidad.html [L,R=301]
-
-# /thanks → /thanks.html
-RewriteRule ^thanks$ thanks.html [L,R=301]
-
-# --------------------------------------------
-# 🔹 OPCIONAL: Hacer que sin extensión funcione sin cambiar la URL visible
-# (solo descomenta si prefieres que /citas muestre citas.html sin redirigir)
-# --------------------------------------------
- RewriteRule ^citas$ citas.html [L]
- RewriteRule ^legal$ legal.html [L]
- RewriteRule ^privacidad$ privacidad.html [L]
- RewriteRule ^thanks$ thanks.html [L]
-
-# --------------------------------------------
-# 🔹 OPCIONAL: Evitar errores 404 por mayúsculas/minúsculas o barra final
-# --------------------------------------------
-RewriteCond %{REQUEST_FILENAME} !-f
+# ------------------------------------------------------------
+# 2) Quitar barra final (excepto si es carpeta real)
+#    /algo/ -> /algo
+# ------------------------------------------------------------
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ /$1 [R=301,L]
+RewriteRule ^(.+)/$ $1 [L,R=301]
 
-# --------------------------------------------
-# 🔹 CABECERAS BÁSICAS DE SEGURIDAD (opcional)
-# --------------------------------------------
+# ------------------------------------------------------------
+# 3) Redirigir .html -> URL limpia (CANÓNICA)
+#    /citas.html -> /citas
+# ------------------------------------------------------------
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
+RewriteRule ^ %1 [L,R=301]
+
+# ------------------------------------------------------------
+# 4) Servir archivos .html cuando se pide la URL sin extensión
+#    /citas -> citas.html (sin redirigir, URL visible limpia)
+# ------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# ------------------------------------------------------------
+# 5) (Opcional) Página de inicio limpia
+#    /index.html -> /
+# ------------------------------------------------------------
+RewriteCond %{THE_REQUEST} \s/(index)\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [L,R=301]
+
+# ------------------------------------------------------------
+# 6) Cabeceras básicas de seguridad
+# ------------------------------------------------------------
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"

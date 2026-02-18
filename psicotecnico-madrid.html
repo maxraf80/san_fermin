@@ -1,3 +1,8 @@
+<!-- ===========================
+FILE: psicotecnico-madrid.html
+(GitHub: abrir como psicotecnico-madrid.html)
+Producción: /psicotecnico-madrid
+=========================== -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,7 +24,7 @@
   <link rel="icon" href="resources/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- JSON-LD: Página + Servicio + FAQ -->
+  <!-- JSON-LD: WebPage + Service + FAQ + Business -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -72,19 +77,47 @@
             "acceptedAnswer":{"@type":"Answer","text":"Sí, en determinadas franjas según afluencia. Si quieres asegurar disponibilidad, pide cita por formulario o contacta por WhatsApp/Telegram."}
           }
         ]
+      },
+      {
+        "@type":"MedicalBusiness",
+        "@id":"https://renovarcarnetdeconducirmadridbarato.com/#business",
+        "name":"Emedical Madrid",
+        "image":"https://renovarcarnetdeconducirmadridbarato.com/resources/logo-emedical.png",
+        "url":"https://renovarcarnetdeconducirmadridbarato.com/",
+        "priceRange":"€",
+        "telephone":"+34 613 000 030",
+        "address":{
+          "@type":"PostalAddress",
+          "streetAddress":"Calle de la Mezquita 5",
+          "addressLocality":"Madrid",
+          "addressRegion":"Madrid",
+          "postalCode":"28041",
+          "addressCountry":"ES"
+        },
+        "geo":{"@type":"GeoCoordinates","latitude":40.367862,"longitude":-3.696974},
+        "areaServed":["Madrid","Usera","San Fermín","Carabanchel","Villaverde","Aluche"],
+        "openingHoursSpecification":[
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"13:30"},
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"16:00","closes":"20:30"}
+        ]
       }
     ]
   }
   </script>
 
   <script defer src="https://cdn.overtracking.com/t/tl9uRKMgNGUSttjUG/"></script>
+
+  <!-- ✅ FIX MENÚ EN GITHUB:
+       Si por cualquier motivo esta página se abre desde una ruta rara,
+       forzamos que los links internos siempre apunten al mismo directorio que el archivo. -->
+  <base href="./">
 </head>
 
 <body>
 
 <header class="row">
   <div class="col-logo">
-    <a href="/" aria-label="Ir a inicio">
+    <a href="index.html" aria-label="Ir a inicio">
       <img src="resources/logo-emedical.png" alt="Emedical Madrid - Psicotécnico en Madrid (Usera)" />
     </a>
   </div>
@@ -93,13 +126,14 @@
     <p class="texto-encabezado">Centro autorizado · Usera / San Fermín · Madrid</p>
     <h1>Psicotécnico en Madrid (Usera)</h1>
 
+    <!-- ✅ MENÚ: TODO con .html y relativo -->
     <nav class="menu" aria-label="Menú principal">
       <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/renovar-carnet-conducir-madrid.html">Renovar carnet</a></li>
-        <li><a href="/psicotecnico-madrid.html" style="font-weight:800; text-decoration:underline;">Psicotécnico</a></li>
-        <li><a href="/certificado-medico-dgt-madrid.html">Trámites DGT</a></li>
-        <li><a href="/citas.html">Pedir cita</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="renovar-carnet-conducir-madrid.html">Renovar carnet</a></li>
+        <li><a href="psicotecnico-madrid.html" style="font-weight:800; text-decoration:underline;">Psicotécnico</a></li>
+        <li><a href="certificado-medico-dgt-madrid.html">Trámites DGT</a></li>
+        <li><a href="citas.html">Pedir cita</a></li>
       </ul>
     </nav>
 
@@ -127,18 +161,18 @@
         <li><strong>Tasas DGT (si es renovación del carnet):</strong> 25€ (según corresponda)</li>
       </ul>
       <p style="margin:10px 0 0;">
-        Para evitar esperas, puedes <a href="/citas"><strong>pedir cita aquí</strong></a> o llamarnos.
+        Para evitar esperas, puedes <a href="citas.html"><strong>pedir cita aquí</strong></a> o llamarnos.
       </p>
       <p style="margin:12px 0 0; display:flex; flex-wrap:wrap; gap:10px;">
         <a class="boton-llamar" href="tel:+34613000030">📞 Llamar</a>
-        <a class="boton-llamar" href="/citas">📝 Pedir cita</a>
+        <a class="boton-llamar" href="citas.html">📝 Pedir cita</a>
       </p>
     </div>
 
     <h2>¿Para qué sirve el psicotécnico?</h2>
     <ul>
-      <li><strong>Renovación del carnet</strong> (ver <a href="/renovar-carnet-conducir-madrid"><strong>Renovar carnet</strong></a>).</li>
-      <li><strong>Certificado médico para trámites DGT</strong> (ver <a href="/certificado-medico-dgt-madrid"><strong>Trámites DGT</strong></a>).</li>
+      <li><strong>Renovación del carnet</strong> (ver <a href="renovar-carnet-conducir-madrid.html"><strong>Renovar carnet</strong></a>).</li>
+      <li><strong>Certificado médico para trámites DGT</strong> (ver <a href="certificado-medico-dgt-madrid.html"><strong>Trámites DGT</strong></a>).</li>
       <li><strong>Otros certificados</strong> según necesidad (por ejemplo, deportivos o licencias específicas).</li>
     </ul>
 
@@ -174,7 +208,7 @@
       </p>
       <p style="display:flex; flex-wrap:wrap; gap:10px; margin:0;">
         <a class="boton-llamar" href="tel:+34613000030">📞 Llamar</a>
-        <a class="boton-llamar" href="/citas">📝 Pedir cita</a>
+        <a class="boton-llamar" href="citas.html">📝 Pedir cita</a>
       </p>
     </div>
 
@@ -187,7 +221,7 @@
     <p>Suele ser un proceso ágil. Si quieres minimizar esperas, pide cita.</p>
 
     <h3>¿El psicotécnico sirve para renovar el carnet?</h3>
-    <p>Sí. Para renovación, revisa la página de <a href="/renovar-carnet-conducir-madrid"><strong>renovar carnet</strong></a> donde explicamos el proceso completo con DGT.</p>
+    <p>Sí. Para renovación, revisa la página de <a href="renovar-carnet-conducir-madrid.html"><strong>renovar carnet</strong></a> donde explicamos el proceso completo con DGT.</p>
 
   </div>
 </section>
@@ -216,7 +250,7 @@
 <div class="disclaimer" role="contentinfo" aria-label="Aviso legal">
   <p>
     Esta web cumple con el RGPD y no utiliza cookies.
-    Consulta la <a href="/privacidad">Política de Privacidad</a> y el <a href="/aviso-legal">Aviso Legal</a>.
+    Consulta la <a href="privacidad.html">Política de Privacidad</a> y el <a href="aviso-legal.html">Aviso Legal</a>.
   </p>
 </div>
 

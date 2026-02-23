@@ -1,76 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/renovar-carnet-conducir-madrid</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/renovar-carnet-conducir-madrid.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/psicotecnico-madrid.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/certificado-medico-dgt-madrid.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/canje-permiso-conducir-extranjero-madrid.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/psicotecnico-madrid</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/citas.html</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/thanks.html</loc><changefreq>monthly</changefreq><priority>0.2</priority></url>
 
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/certificado-medico-dgt-madrid</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/psicotecnico-usera.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/psicotecnico-villaverde.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/psicotecnico-carabanchel.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/psicotecnico-aluche.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/psicotecnico-san-fermin.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/citas</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/renovar-carnet-conducir-usera.html</loc><changefreq>weekly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/renovar-carnet-conducir-villaverde.html</loc><changefreq>weekly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/renovar-carnet-conducir-carabanchel.html</loc><changefreq>weekly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/renovar-carnet-conducir-aluche.html</loc><changefreq>weekly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/renovar-carnet-conducir-san-fermin.html</loc><changefreq>weekly</changefreq><priority>0.65</priority></url>
 
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/thanks</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
-  </url>
-
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/privacidad</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/aviso-legal</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-
-  <!-- Hiperlocales psicotécnico -->
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/psicotecnico-usera</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/psicotecnico-villaverde</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/psicotecnico-aluche</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-    <url>
-    <loc>https://renovarcarnetdeconducirmadridbarato.com/canje-permiso-conducir-extranjero-madrid</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/privacidad.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://renovarcarnetdeconducirmadridbarato.com/aviso-legal.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>

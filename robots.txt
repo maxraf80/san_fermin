@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://renovarcarnetdeconducirmadridbarato.com/sitemap.xml

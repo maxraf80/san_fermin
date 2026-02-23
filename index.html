@@ -121,22 +121,68 @@ Ruta producción: /
     </p>
 
     <!-- Logo DGT (uso informativo) -->
-    <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin:22px 0; padding:14px 16px; background:#f8f9fa; border-radius:12px; border:1px solid rgba(0,0,0,.06);">
-      <img
-        src="maxraf80/san_fermin/resources/logo-dgt-tramitacion-madrid.webp"
-        alt="Tramitación con la Dirección General de Tráfico (DGT)"
-        loading="lazy"
-        width="300"
-        height="211"
-        style="max-width:160px; width:100%; height:auto; object-fit:contain;"
-      >
-      <div style="flex:1; min-width:220px;">
-        <strong>Tramitación con la DGT</strong><br>
-        Gestionamos tu renovación de forma telemática para que <strong>no tengas que ir a Tráfico</strong>.
-        <div style="font-size:.92rem; opacity:.85; margin-top:6px;">
-          (Incluye el envío de tu solicitud a la DGT y la entrega de la autorización provisional para conducir)
+    <div style="
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      margin:22px 0;
+      padding:16px 18px;
+      background:#f8f9fa;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.07);
+      box-shadow:0 6px 18px rgba(0,0,0,.05);
+    ">
+
+      <!-- Caja del logo para que destaque -->
+      <div style="
+        flex:0 0 220px;
+        max-width:220px;
+        width:220px;
+        background:#fff;
+        border:1px solid rgba(0,0,0,.06);
+        border-radius:12px;
+        padding:12px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      ">
+        <img
+          src="maxraf80/san_fermin/resources/logo-dgt-tramitacion-madrid.webp"
+          alt="Tramitación con la Dirección General de Tráfico (DGT)"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
+          width="300"
+          height="211"
+          style="
+            width:100%;
+            height:auto;
+            max-width:200px;
+            display:block;
+            object-fit:contain;
+          "
+        >
+      </div>
+
+      <!-- Texto -->
+      <div style="flex:1; min-width:240px;">
+        <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
+          Tramitación con la DGT
+        </div>
+        <div style="line-height:1.45;">
+          Gestionamos tu renovación de forma telemática para que <strong>no tengas que ir a Tráfico</strong>.
+        </div>
+        <div style="font-size:.92rem; opacity:.88; margin-top:8px; line-height:1.35;">
+          Incluye el envío de tu solicitud a la DGT y la entrega de la <strong>autorización provisional</strong>
+          para conducir en España.
+        </div>
+        <div style="font-size:.85rem; opacity:.7; margin-top:8px;">
+          Uso informativo: Emedical Madrid no es un organismo oficial.
         </div>
       </div>
+
     </div>
 
     <p>

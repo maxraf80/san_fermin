@@ -1,4 +1,14 @@
+# Robots.txt para renovarcarnetdeconducirmadridbarato.com
+# Generado para optimizar el SEO local de Emedical Madrid
+
 User-agent: *
 Allow: /
 
+# Bloquear páginas que no deben aparecer en los resultados de búsqueda
+Disallow: /thanks.html
+Disallow: /privacidad.html
+Disallow: /aviso-legal.html
+Disallow: /404.html
+
+# Indicar la ubicación del sitemap para facilitar la indexación
 Sitemap: https://renovarcarnetdeconducirmadridbarato.com/sitemap.xml

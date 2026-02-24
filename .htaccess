@@ -1,5 +1,5 @@
 # ============================================================
-# Emedical Madrid - .htaccess (SEO + URLs limpias)
+# Emedical Madrid - .htaccess (SEO + URLs limpias + Velocidad)
 # ============================================================
 
 RewriteEngine On
@@ -27,20 +27,41 @@ RewriteRule ^ %1 [L,R=301]
 
 # ------------------------------------------------------------
 # 4) Servir archivos .html cuando se pide la URL sin extensión
-#    /citas -> citas.html (sin redirigir, URL visible limpia)
+#    /citas -> citas.html (URL visible limpia)
 # ------------------------------------------------------------
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L]
 
 # ------------------------------------------------------------
-# 5) (Opcional) Página de inicio limpia
-#    /index.html -> /
+# 5) Página de inicio limpia (/index -> /)
 # ------------------------------------------------------------
 RewriteCond %{THE_REQUEST} \s/(index)\.html[\s?] [NC]
 RewriteRule ^index\.html$ / [L,R=301]
 
 # ------------------------------------------------------------
-# 6) Cabeceras básicas de seguridad
+# 6) Compresión Gzip (Mejora la velocidad de carga)
+# ------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript
+</IfModule>
+
+# ------------------------------------------------------------
+# 7) Caché de Navegador (Optimización Google PageSpeed)
+# ------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpg "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# ------------------------------------------------------------
+# 8) Cabeceras básicas de seguridad
 # ------------------------------------------------------------
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"

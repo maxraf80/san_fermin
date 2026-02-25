@@ -1,11 +1,9 @@
 /* ============================================================
-    🩺 Emedical Madrid — Estilos Finales (ELEGANCIA & ACCESIBILIDAD)
-    Revisión: Botones premium sólidos, H3 limpio y sin parches.
+    🩺 Emedical Madrid — Estilos Finales (VERSIÓN PULIDA)
+    Correcciones: Contraste en footer, Botones adaptables y Legal.
 ============================================================ */
 
-/* =========================================
-   1. FUENTES (Carga rápida optimizada)
-========================================= */
+/* 1. FUENTES (Carga optimizada) */
 @font-face {
   font-family: "Poppins";
   src: url("resources/Poppins/Poppins-Regular.woff2") format("woff2"),
@@ -26,9 +24,7 @@
   font-display: swap;
 }
 
-/* =========================================
-   2. RESET Y BASE
-========================================= */
+/* 2. RESET Y BASE */
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -38,7 +34,7 @@ body {
   font-family: "Poppins", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   background: url("resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.webp") center/cover no-repeat;
-  background-attachment: scroll; /* Mejor rendimiento en móviles */
+  background-attachment: scroll;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -46,9 +42,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* =========================================
-   3. HEADER Y LOGO
-========================================= */
+/* 3. HEADER Y LOGO */
 header {
   display: flex;
   flex-direction: column;
@@ -73,30 +67,40 @@ header {
   opacity: 1 !important;
 }
 
-/* =========================================
-   4. TÍTULOS (LIMPIOS Y ELEGANTES)
-========================================= */
+/* 4. TÍTULOS Y JERARQUÍA */
 h1, h2, h3 { 
   text-align: center !important; 
   width: 100%;
   margin-top: 20px;
   font-weight: 700;
-  /* Eliminado el fondo de parche gris/blanco */
 }
 
-h1, h2 {
-  color: #111111;
+h1 {
+  font-size: 1.8rem;
+  color: #111;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Diseño específico y elegante para el H3 (Ej. "Contacto") */
+h2 {
+  color: #1a2a5a;
+  margin-bottom: 10px;
+}
+
 h3 {
-  color: #1a2a5a; /* Azul médico oscuro, máximo contraste y elegancia */
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
-  border-bottom: 3px solid #ffbc00; /* Subrayado inferior elegante */
-  max-width: fit-content; 
-  margin-left: auto; /* Centrado perfecto */
+  color: #1a2a5a;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  background: transparent !important;
+  border-bottom: 3px solid #ffbc00; 
+  display: table;
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -104,20 +108,18 @@ h3 {
   font-size: 1.1rem;
   font-weight: 600;
   color: #1a2a5a;
-  background: rgb(255, 255, 255) !important; /* Caja blanca sólida para destacar sobre la foto */
+  background: #fff !important;
   padding: 12px 24px;
   border-radius: 12px;
   display: block; 
   margin: 10px auto;
   max-width: fit-content;
-  border: 1px solid rgba(0,0,0,0.08); 
+  border: 1px solid rgba(0,0,0,0.05);
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* =========================================
-   5. MENÚ DE NAVEGACIÓN
-========================================= */
+/* 5. MENÚ */
 .menu {
   margin: 15px auto;
   background: rgba(0, 0, 0, 0.85);
@@ -141,63 +143,63 @@ h3 {
   text-decoration: none;
   font-weight: 600;
   padding: 8px 15px;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: background 0.3s;
+  text-align: center;
 }
 
 .menu a:hover { background: rgba(255, 255, 255, 0.2); }
 
-/* =========================================
-   6. BOTÓN CTA (ESTÉTICA MODERNA Y ACCESIBLE)
-========================================= */
+/* 6. BOTONES CTA (ANTI-DESBORDAMIENTO) */
 .boton-llamar {
   display: block !important;
-  margin: 25px auto !important;
+  margin: 20px auto !important;
   width: fit-content;
+  max-width: 100%; /* Evita que el botón sea más ancho que la pantalla */
   padding: 16px 36px;
-  border-radius: 50px; /* Forma de píldora premium */
+  border-radius: 50px; 
   text-decoration: none;
-  font-weight: 700 !important; 
-  font-size: 1.05rem;
+  font-weight: 700 !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  
-  /* Sombra amplia y difuminada (Efecto flotante) */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
-  border: none !important; /* Sin bordes oscuros */
-  
-  opacity: 1 !important; /* Sin transparencias */
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   text-align: center;
+  
+  /* Permite que el texto baje a la siguiente línea si es muy largo */
+  white-space: normal; 
+  word-wrap: break-word;
+  line-height: 1.3;
+  
+  opacity: 1 !important;
+  visibility: visible !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: none;
+  transition: all 0.3s ease;
 }
 
-/* Botón Amarillo Premium */
+/* Colores de Botones */
 .boton-amarillo, 
 [style*="background: #e3a426"], 
 [style*="background-color: #e3a426"] {
-  background: #ffbc00 !important; /* Amarillo vibrante y opaco */
+  background: #ffbc00 !important;
   background-color: #ffbc00 !important;
-  color: #111111 !important; /* Gris ultra oscuro, contraste perfecto pero elegante */
+  color: #111111 !important; 
 }
 
-/* Botón Azul Premium */
 .boton-azul,
 [style*="background: #223366"],
 [style*="background-color: #223366"] {
-  background: #1a2a5a !important; /* Azul médico opaco */
+  background: #1a2a5a !important;
   background-color: #1a2a5a !important;
   color: #ffffff !important;
 }
 
 .boton-llamar:hover {
-  transform: translateY(-4px); 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22) !important; 
-  filter: brightness(1.05); 
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05);
 }
 
-/* =========================================
-   7. CONTENIDO PRINCIPAL
-========================================= */
+/* 7. CONTENIDO PRINCIPAL */
 .fila {
   max-width: 1100px;
   margin: 20px auto;
@@ -206,53 +208,80 @@ h3 {
 }
 
 .col-2 {
-  background: rgb(255, 255, 255) !important; /* Fondo 100% blanco y sólido */
-  padding: 35px;
+  background: #ffffff !important; 
+  padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
   color: #333;
 }
 
 /* =========================================
-   8. FOOTER
+   8. FOOTER Y LEGAL (CORREGIDO CONTRASTE Y MÁRGENES)
 ========================================= */
 footer {
   background: #1a1a1a;
-  color: #fff;
+  color: #ffffff !important; /* Forzamos color blanco general */
   text-align: center;
   padding: 40px 20px;
   margin-top: auto;
+  width: 100%;
 }
 
-footer a { color: #ffbc00; text-decoration: underline; }
+/* Aseguramos que los textos sueltos en el footer sean blancos */
+footer p, footer span {
+  color: #ffffff !important; 
+  opacity: 0.9;
+}
 
-/* Adaptación del H3 oscuro para el footer */
+footer a { color: #ffbc00; text-decoration: none; }
+
 footer h3 {
-  color: #ffffff;
-  border-bottom: 2px solid #ffbc00;
+  color: #ffffff !important;
+  border-bottom-color: #ffbc00;
+  margin-bottom: 15px;
+  background: transparent !important;
 }
 
-/* =========================================
-   9. RESPONSIVE (MÓVILES)
-========================================= */
+/* Texto Legal (Acolchado añadido para que no toque las paredes) */
+.disclaimer {
+  background: #000000;
+  color: #cccccc;
+  text-align: center;
+  padding: 20px 25px; /* Más espacio a los lados */
+  font-size: 0.85rem;
+  width: 100%;
+  box-sizing: border-box; /* Asegura que el padding no rompa la pantalla */
+  line-height: 1.5;
+}
+
+.disclaimer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* 9. BOTONES FLOTANTES */
+.wa-button, .tg-button {
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+  transition: transform 0.3s;
+}
+.wa-button:hover, .tg-button:hover { transform: scale(1.1); }
+
+/* 10. RESPONSIVE MOBILE */
 @media (max-width: 600px) {
   .col-logo img { max-width: 180px; }
+  h1 { font-size: 1.4rem; padding: 10px; width: 95%; }
+  .texto-encabezado { font-size: 0.95rem; width: 95%; padding: 10px; }
   
-  /* Pequeño fondo semitransparente solo para el H1 en móviles si pisa la foto */
-  h1 { font-size: 1.4rem; background: rgba(255,255,255,0.9); border-radius: 8px; padding: 5px; }
+  /* Más espacio interior y evitar desbordes */
+  .col-2 { padding: 25px 20px; overflow-x: hidden; } 
   
-  .boton-llamar { width: 90%; font-size: 1rem; padding: 16px 20px; }
-  .col-2 { padding: 20px; }
-}
-
-/* =========================================
-   10. BOTONES FLOTANTES (WhatsApp / Telegram)
-========================================= */
-.wa-button, .tg-button {
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25)); 
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.wa-button:hover, .tg-button:hover { 
-  transform: scale(1.1); 
+  .menu a { font-size: 0.85rem; padding: 8px 10px; }
+  
+  /* Ajuste de botones para móvil */
+  .boton-llamar { 
+    width: 100%; /* Ocupa todo el ancho posible con márgenes */
+    font-size: 0.95rem; 
+    padding: 15px 10px; 
+    border-radius: 12px; /* En móvil, un borde menos redondo a veces encaja mejor el texto largo */
+  }
 }

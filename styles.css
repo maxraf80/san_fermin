@@ -1,72 +1,65 @@
 /* ============================================================
-    🩺 Emedical Madrid — Estilos principales (FINAL CORREGIDO)
-    Autor: Desyuno Web
-    Revisión: Feb 2026
+    🩺 Emedical Madrid — Estilos principales (OPTIMIZADOS 2026)
+    Mejoras: Contraste de accesibilidad, WOFF2 y carga de fuentes.
 ============================================================ */
 
-/* --------------------------
-    🔹 FUENTES LOCALES
---------------------------- */
+/* 1. FUENTES: Prioridad WOFF2 + Evitar texto invisible */
 @font-face {
-  font-family: 'Poppins';
-  src: url('resources/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-family: "Poppins";
+  src: url("resources/Poppins/Poppins-Regular.woff2") format("woff2"),
+       url("resources/Poppins/Poppins-Regular.woff") format("woff"),
+       url("resources/Poppins/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: swap; /* Permite ver texto mientras carga la fuente */
 }
+
 @font-face {
-  font-family: 'Poppins';
-  src: url('resources/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-family: "Poppins";
+  src: url("resources/Poppins/Poppins-Bold.woff2") format("woff2"),
+       url("resources/Poppins/Poppins-Bold.woff") format("woff"),
+       url("resources/Poppins/Poppins-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* --------------------------
-    🔹 RESETEO Y BASE
---------------------------- */
-*,
-*::before,
-*::after { box-sizing: border-box; }
+/* 2. RESET Y BASE */
+*, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: smooth; 
+  font-size: 16px; /* Base para rem */
+}
 
 body {
   margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  /* CORRECCIÓN: Eliminado 'fixed' para evitar bloqueo de enlaces */
-  background: url('resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.webp') center/cover no-repeat;
-  background-attachment: scroll; 
+  /* Optimización de imagen de fondo */
+  background: url("resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.webp") center/cover no-repeat;
+  background-attachment: scroll; /* Mejor rendimiento que 'fixed' en móviles */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: #333;
+  color: #222;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Asegura que todos los enlaces tengan prioridad de clic */
+/* Enlaces con zona de clic clara */
 a {
   cursor: pointer;
   position: relative;
   z-index: 10;
 }
 
-/* --------------------------
-    🔹 HEADER Y NAVEGACIÓN
---------------------------- */
+/* 3. HEADER Y NAVEGACIÓN */
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding-bottom: 10px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .col-logo img {
@@ -76,26 +69,22 @@ header {
   display: block;
 }
 
-.col-title {
-  text-align: center;
-  padding: 0 15px;
-}
-
 .texto-encabezado {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #223366;
-  background: rgba(255, 255, 255, 0.85);
+  color: #1a2a5a; /* Azul más profundo para contraste */
+  background: rgba(255, 255, 255, 0.9);
   padding: 10px 20px;
   border-radius: 12px;
   display: inline-block;
   margin: 10px 0;
   border: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 .menu {
   margin: 15px auto;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   border-radius: 10px;
   padding: 10px;
   max-width: 95%;
@@ -124,46 +113,43 @@ header {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* --------------------------
-    🔹 BOTONES CTA
---------------------------- */
+/* 4. BOTONES CTA (CORREGIDO PARA ACCESIBILIDAD) */
 .boton-llamar {
   display: inline-block;
-  background-color: #e3a426;
-  color: #fff !important;
-  padding: 12px 25px;
+  background-color: #e3a426; 
+  color: #000000 !important; /* TEXTO NEGRO: Vital para pasar el test de contraste sobre naranja */
+  padding: 14px 28px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.2s;
+  border: none;
 }
 
 .boton-llamar:hover {
   transform: translateY(-2px);
+  background-color: #f0b135;
 }
 
-/* --------------------------
-    🔹 CONTENIDO PRINCIPAL
---------------------------- */
+/* 5. CONTENIDO PRINCIPAL */
 .fila {
   max-width: 1100px;
   margin: 20px auto;
   padding: 0 20px;
+  width: 100%;
 }
 
 .col-2 {
-  background: rgba(255, 255, 255, 0.97);
-  padding: 30px;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 35px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-h2 { color: #222; margin-top: 0; }
+h1, h2 { color: #111; margin-top: 0; }
 
-/* --------------------------
-    🔹 FOOTER Y LEGAL
---------------------------- */
+/* 6. FOOTER */
 footer {
   background: #1a1a1a;
   color: #fff;
@@ -172,37 +158,40 @@ footer {
   margin-top: auto;
 }
 
-footer a { color: #e3a426; }
+footer a { 
+  color: #e3a426; 
+  text-decoration: underline;
+}
 
 .disclaimer {
   background: #000;
-  color: #888;
+  color: #aaa;
   text-align: center;
   padding: 15px;
   font-size: 0.85rem;
 }
 
-.disclaimer a { color: #fff; }
-
-/* --------------------------
-    🔹 BOTONES FLOTANTES (CORRECCIÓN)
---------------------------- */
+/* 7. BOTONES FLOTANTES (WA/TG) */
 .wa-button, .tg-button {
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: block;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
 }
 
 .wa-button:hover, .tg-button:hover {
   transform: scale(1.1);
 }
 
-/* --------------------------
-    🔹 RESPONSIVE
---------------------------- */
+/* 8. RESPONSIVE */
 @media (max-width: 600px) {
-  .col-logo img { max-width: 160px; }
+  .col-logo img { max-width: 180px; }
+  .texto-encabezado { font-size: 1rem; }
   .menu a { font-size: 0.85rem; padding: 6px 10px; }
   .col-2 { padding: 20px; }
-  .wa-button, .tg-button { width: 50px !important; right: 15px !important; }
-  .tg-button { bottom: 80px !important; }
+  
+  /* Ajuste botones flotantes en móvil */
+  .wa-button, .tg-button { 
+    width: 55px !important; 
+    right: 15px !important; 
+  }
 }

@@ -23,45 +23,106 @@
   <link rel="stylesheet" href="styles.css" />
 
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"WebSite",
-        "@id":"https://renovarcarnetdeconducirmadridbarato.com/#website",
-        "url":"https://renovarcarnetdeconducirmadridbarato.com/",
-        "name":"Emedical Madrid",
-        "inLanguage":"es-ES"
+ {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://renovarcarnetdeconducirmadridbarato.com/#website",
+      "url": "https://renovarcarnetdeconducirmadridbarato.com/",
+      "name": "Emedical Madrid",
+      "inLanguage": "es-ES"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://renovarcarnetdeconducirmadridbarato.com/#webpage",
+      "url": "https://renovarcarnetdeconducirmadridbarato.com/",
+      "name": "Renovar carnet de conducir en Madrid | Emedical",
+      "isPartOf": { "@id": "https://renovarcarnetdeconducirmadridbarato.com/#website" },
+      "about": { "@id": "https://renovarcarnetdeconducirmadridbarato.com/#business" },
+      "description": "Psicotécnico oficial en Madrid (Usera) para renovación de carnet de conducir, armas y náutica.",
+      "inLanguage": "es-ES"
+    },
+    {
+      "@type": ["MedicalBusiness", "LocalBusiness"],
+      "@id": "https://renovarcarnetdeconducirmadridbarato.com/#business",
+      "name": "Renovar el Carnet de conducir E-medical Madrid",
+      "url": "https://renovarcarnetdeconducirmadridbarato.com/",
+      "mainEntityOfPage": { "@id": "https://renovarcarnetdeconducirmadridbarato.com/#webpage" },
+      "image": "https://renovarcarnetdeconducirmadridbarato.com/resources/logo-emedical.png",
+      "logo": "https://renovarcarnetdeconducirmadridbarato.com/resources/logo-emedical.png",
+      "telephone": "+34 613 000 030",
+      "priceRange": "€",
+      "currenciesAccepted": "EUR",
+      
+      /* Enlace corregido a tu ficha real */
+      "hasMap": "https://www.google.com/maps?cid=4771151421373288436",
+      "sameAs": [
+        "https://www.google.com/maps?cid=4771151421373288436"
+      ],
+
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle de la Mezquita 5",
+        "addressLocality": "Madrid",
+        "addressRegion": "Madrid",
+        "postalCode": "28041",
+        "addressCountry": "ES"
       },
-      {
-        "@type":"MedicalBusiness",
-        "@id":"https://renovarcarnetdeconducirmadridbarato.com/#business",
-        "name":"Emedical Madrid",
-        "image":"https://renovarcarnetdeconducirmadridbarato.com/resources/logo-emedical.png",
-        "url":"https://renovarcarnetdeconducirmadridbarato.com/",
-        "telephone":"+34 613 000 030",
-        "priceRange":"€",
-        "address":{
-          "@type":"PostalAddress",
-          "streetAddress":"Calle de la Mezquita 5",
-          "addressLocality":"Madrid",
-          "addressRegion":"Madrid",
-          "postalCode":"28041",
-          "addressCountry":"ES"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.367862,
+        "longitude": -3.696974
+      },
+
+      "areaServed": [
+        { "@type": "City", "name": "Madrid" },
+        { "@type": "AdministrativeArea", "name": "Usera" },
+        { "@type": "AdministrativeArea", "name": "San Fermín" },
+        { "@type": "AdministrativeArea", "name": "Villaverde" },
+        { "@type": "AdministrativeArea", "name": "Carabanchel" },
+        { "@type": "AdministrativeArea", "name": "Aluche" }
+      ],
+
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "10:00",
+          "closes": "13:30"
         },
-        "geo":{
-          "@type":"GeoCoordinates",
-          "latitude":40.367862,
-          "longitude":-3.696974
-        },
-        "areaServed":["Madrid","Usera","San Fermín","Villaverde","Carabanchel","Aluche"],
-        "openingHoursSpecification":[
-          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"13:30"},
-          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"16:00","closes":"20:30"}
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "16:00",
+          "closes": "20:30"
+        }
+      ],
+
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Psicotécnico",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Renovación del carnet de conducir (DGT)",
+              "description": "Tramitación gratuita de la tasa DGT y fotos en el acto."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Certificados para armas, seguridad privada y náutica"
+            }
+          }
         ]
       }
-    ]
-  }
+    }
+  ]
+}
   </script>
   <script defer src="https://cdn.overtracking.com/t/tl9uRKMgNGUSttjUG/"></script>
   <meta name="google-site-verification" content="y5121n2UEnLgdMGEGSfnKUNO7YImEGPZXVZkI82BWBg">

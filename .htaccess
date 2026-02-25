@@ -14,11 +14,11 @@ RewriteRule ^(.*)$ https://renovarcarnetdeconducirmadridbarato.com/$1 [L,R=301]
 # 2) REGLA PARA RENOVAR CARNET (Caso especial)
 RewriteRule ^renovar-carnet-conducir-madrid$ renovar-carnet-conducir-madrid.html [L,NC]
 
-# 3) REGLA GENÉRICA PARA EL RESTO DE PÁGINAS (Quitar .html de la URL)
+# 3) REGLA GENÉRICA PARA EL RESTO DE PÁGINAS (Parche Hostalia/Plesk)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html [L]
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.*)$ /$1.html [L]
 
 # ============================================================
 # 4) OPTIMIZACIÓN DE RENDIMIENTO (Caché y Velocidad)

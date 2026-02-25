@@ -1,9 +1,9 @@
 /* ============================================================
-    🩺 Emedical Madrid — Estilos principales (OPTIMIZADOS 2026)
-    Mejoras: Contraste de accesibilidad, WOFF2 y carga de fuentes.
+    🩺 Emedical Madrid — Estilos Finales (CORREGIDO Y CENTRADO)
+    Revisión: Feb 2026 - Accesibilidad y Alineación
 ============================================================ */
 
-/* 1. FUENTES: Prioridad WOFF2 + Evitar texto invisible */
+/* 1. FUENTES (Optimización de carga) */
 @font-face {
   font-family: "Poppins";
   src: url("resources/Poppins/Poppins-Regular.woff2") format("woff2"),
@@ -11,7 +11,7 @@
        url("resources/Poppins/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: swap; /* Permite ver texto mientras carga la fuente */
+  font-display: swap;
 }
 
 @font-face {
@@ -27,18 +27,14 @@
 /* 2. RESET Y BASE */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { 
-  scroll-behavior: smooth; 
-  font-size: 16px; /* Base para rem */
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   font-family: "Poppins", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  /* Optimización de imagen de fondo */
   background: url("resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.webp") center/cover no-repeat;
-  background-attachment: scroll; /* Mejor rendimiento que 'fixed' en móviles */
+  background-attachment: scroll;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -46,14 +42,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Enlaces con zona de clic clara */
-a {
-  cursor: pointer;
-  position: relative;
-  z-index: 10;
-}
-
-/* 3. HEADER Y NAVEGACIÓN */
+/* 3. HEADER Y LOGO */
 header {
   display: flex;
   flex-direction: column;
@@ -62,26 +51,41 @@ header {
   padding-bottom: 10px;
 }
 
+.col-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra el contenedor del logo */
+}
+
 .col-logo img {
   max-width: 220px;
   height: auto;
-  margin: 20px 0;
+  margin: 20px auto;
   display: block;
+}
+
+/* 4. TEXTOS Y H1 (CENTRADO) */
+h1, h2 { 
+  text-align: center; /* Centra todos los títulos por defecto */
+  color: #111;
+  width: 100%;
 }
 
 .texto-encabezado {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #1a2a5a; /* Azul más profundo para contraste */
+  color: #1a2a5a;
   background: rgba(255, 255, 255, 0.9);
   padding: 10px 20px;
   border-radius: 12px;
-  display: inline-block;
-  margin: 10px 0;
+  display: block; /* Cambiado a block para centrado fácil */
+  margin: 10px auto;
+  max-width: fit-content;
   border: 1px solid rgba(0,0,0,0.1);
   text-align: center;
 }
 
+/* 5. MENÚ NAVEGACIÓN */
 .menu {
   margin: 15px auto;
   background: rgba(0, 0, 0, 0.85);
@@ -109,30 +113,43 @@ header {
   transition: background 0.3s;
 }
 
-.menu a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* 4. BOTONES CTA (CORREGIDO PARA ACCESIBILIDAD) */
+/* 6. BOTONES CTA (CONTROL DE CONTRASTE) */
 .boton-llamar {
-  display: inline-block;
-  background-color: #e3a426; 
-  color: #000000 !important; /* TEXTO NEGRO: Vital para pasar el test de contraste sobre naranja */
+  display: block; /* Cambiado a block para centrar con margin auto */
+  margin: 20px auto; /* Centrado horizontal automático */
+  width: fit-content;
   padding: 14px 28px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   transition: transform 0.2s, background-color 0.2s;
+  text-align: center;
   border: none;
+}
+
+/* Botón Amarillo (Texto Negro para contraste) */
+.boton-amarillo, 
+[style*="background: #e3a426"], 
+[style*="background-color: #e3a426"] {
+  background-color: #e3a426 !important;
+  color: #000000 !important;
+}
+
+/* Botón Azul (Texto Blanco para contraste) */
+.boton-azul,
+[style*="background: #223366"],
+[style*="background-color: #223366"] {
+  background-color: #223366 !important;
+  color: #ffffff !important;
 }
 
 .boton-llamar:hover {
   transform: translateY(-2px);
-  background-color: #f0b135;
+  filter: brightness(1.1);
 }
 
-/* 5. CONTENIDO PRINCIPAL */
+/* 7. CONTENIDO PRINCIPAL */
 .fila {
   max-width: 1100px;
   margin: 20px auto;
@@ -147,9 +164,7 @@ header {
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-h1, h2 { color: #111; margin-top: 0; }
-
-/* 6. FOOTER */
+/* 8. FOOTER */
 footer {
   background: #1a1a1a;
   color: #fff;
@@ -158,40 +173,17 @@ footer {
   margin-top: auto;
 }
 
-footer a { 
-  color: #e3a426; 
-  text-decoration: underline;
-}
-
-.disclaimer {
-  background: #000;
-  color: #aaa;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.85rem;
-}
-
-/* 7. BOTONES FLOTANTES (WA/TG) */
+/* 9. BOTONES FLOTANTES */
 .wa-button, .tg-button {
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.3s;
   display: block;
   filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
 }
 
-.wa-button:hover, .tg-button:hover {
-  transform: scale(1.1);
-}
-
-/* 8. RESPONSIVE */
+/* 10. RESPONSIVE */
 @media (max-width: 600px) {
   .col-logo img { max-width: 180px; }
-  .texto-encabezado { font-size: 1rem; }
-  .menu a { font-size: 0.85rem; padding: 6px 10px; }
+  h1 { font-size: 1.5rem; padding: 0 10px; }
   .col-2 { padding: 20px; }
-  
-  /* Ajuste botones flotantes en móvil */
-  .wa-button, .tg-button { 
-    width: 55px !important; 
-    right: 15px !important; 
-  }
+  .wa-button, .tg-button { width: 55px !important; }
 }

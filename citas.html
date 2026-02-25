@@ -39,7 +39,7 @@
 
   <header class="row">
     <div class="col-logo">
-      <a href="index.html">
+      <a href="/">
         <img src="resources/logo-emedical.png" alt="Emedical Madrid - Pedir Cita">
       </a>
     </div>
@@ -50,12 +50,12 @@
 
       <nav class="menu">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="renovar-carnet-conducir-madrid.html">Renovar Carnet</a></li>
-          <li><a href="psicotecnico-madrid.html">Psicotécnico</a></li>
-          <li><a href="certificado-medico-dgt-madrid.html">Trámites DGT</a></li>
-          <li><a href="canje-permiso-conducir-extranjero-madrid.html">Canjes</a></li>
-          <li><a href="citas.html" style="font-weight:800; text-decoration:underline;">Pedir Cita</a></li>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="renovar-carnet-conducir-madrid">Renovar Carnet</a></li>
+          <li><a href="psicotecnico-madrid">Psicotécnico</a></li>
+          <li><a href="certificado-medico-dgt-madrid">Trámites DGT</a></li>
+          <li><a href="canje-permiso-conducir-extranjero-madrid">Canjes</a></li>
+          <li><a href="citas" style="font-weight:800; text-decoration:underline;">Pedir Cita</a></li>
         </ul>
       </nav>
       <a href="tel:+34613000030" class="boton-llamar">📞 613 000 030</a>
@@ -66,86 +66,103 @@
     <section class="fila">
       <div class="col-2">
         <h2>Cómo pedir tu cita previa</h2>
-        <p>Para garantizarte la mejor atención y evitar tiempos de espera, ponemos a tu disposición diferentes canales directos. Elige el que te resulte más cómodo:</p>
+        <p>Elige el canal que te resulte más cómodo para reservar tu reconocimiento médico:</p>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0;">
           <div style="padding: 25px; background: #e8f5e9; border-radius: 15px; border: 1px solid #c8e6c9; text-align: center;">
             <img src="resources/whatsapp.png" alt="WhatsApp" style="width: 50px; margin-bottom: 15px;">
             <h3>WhatsApp</h3>
-            <p>La forma más rápida. Envíanos un mensaje y te confirmamos en minutos.</p>
+            <p>La vía más rápida. Confirmación inmediata.</p>
             <a href="https://wa.me/34613000030" class="boton-llamar" style="background: #25d366; display: inline-block;">Chat Directo</a>
           </div>
 
           <div style="padding: 25px; background: #eef2ff; border-radius: 15px; border: 1px solid #d0d7ff; text-align: center;">
             <h3 style="font-size: 3rem; margin: 0;">📞</h3>
-            <h3>Llamada Directa</h3>
-            <p>Si prefieres hablar con nosotros, llámanos en nuestro horario comercial.</p>
+            <h3>Llamada</h3>
+            <p>Atención telefónica personalizada.</p>
             <a href="tel:+34613000030" class="boton-llamar" style="background: #223366; display: inline-block;">Llamar ahora</a>
           </div>
-
-          <div style="padding: 25px; background: #e1f5fe; border-radius: 15px; border: 1px solid #b3e5fc; text-align: center;">
-            <img src="resources/Telegram_logo.svg" alt="Telegram" style="width: 50px; margin-bottom: 15px;">
-            <h3>Telegram</h3>
-            <p>También estamos disponibles a través de Telegram para tu comodidad.</p>
-            <a href="https://t.me/EmedicalMadrid" class="boton-llamar" style="background: #0088cc; display: inline-block;">Escribir por Telegram</a>
-          </div>
         </div>
 
-        <div style="background: #f9f9f9; padding: 30px; border-radius: 15px; margin-top: 20px;">
+        <div style="background: #fdf6e9; padding: 30px; border-radius: 15px; border: 1px solid #e3a426; margin-top: 20px;">
+          <h2 style="margin-top:0;">O si lo prefieres, te llamamos nosotros</h2>
+          <p>Déjanos tus datos y nos pondremos en contacto contigo para agendar tu cita:</p>
+          
+          <form id="appointmentForm" action="https://formsubmit.co/ajax/TU_CORREO_AQUÍ" method="POST" style="display: grid; gap: 15px;">
+            <input type="hidden" name="_next" value="https://renovarcarnetdeconducirmadridbarato.com/thanks">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <input type="text" name="name" placeholder="Tu nombre completo" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+            <input type="tel" name="phone" placeholder="Teléfono de contacto" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+            <select name="service" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+              <option value="">Selecciona el trámite</option>
+              <option value="Renovación carnet">Renovación carnet de conducir</option>
+              <option value="Obtención carnet">Obtención (Psicotécnico inicial)</option>
+              <option value="Canje">Canje de permiso extranjero</option>
+              <option value="Armas/Otros">Armas, Seguridad, Otros</option>
+            </select>
+            <textarea name="message" placeholder="¿Alguna duda o preferencia de horario?" rows="3" style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+            
+            <div style="font-size: 0.8rem; color: #666;">
+              <input type="checkbox" required> Acepto la <a href="privacidad">política de privacidad</a>.
+            </div>
+            
+            <button type="submit" class="boton-llamar" style="background: #e3a426; border: none; cursor: pointer; font-size: 1.1rem;">Enviar solicitud de cita</button>
+          </form>
+        </div>
+
+        <div style="background: #f9f9f9; padding: 30px; border-radius: 15px; margin-top: 30px;">
           <h2>Horario de atención</h2>
-          <p>Te atendemos en nuestro centro de la <strong>Calle de la Mezquita 5</strong> (Usera/San Fermín):</p>
+          <p>📍 <strong>Calle de la Mezquita 5</strong>, 28041 Madrid:</p>
           <ul style="list-style: none; padding: 0;">
             <li style="padding: 8px 0; border-bottom: 1px solid #eee;"><strong>Lunes a Viernes:</strong> 10:00 - 13:30 y 16:00 - 20:30</li>
-            <li style="padding: 8px 0;"><strong>Sábados:</strong> Consultar cita previa</li>
+            
           </ul>
-        </div>
-
-        <h2 style="margin-top: 40px;">¿Qué debes traer a tu cita?</h2>
-        <ul>
-          <li><strong>DNI, NIE o Pasaporte</strong> original y en vigor.</li>
-          <li><strong>Gafas o lentillas</strong> si las utilizas para conducir.</li>
-          <li><strong>Carnet actual</strong> (si es para renovación).</li>
-        </ul>
-
-        <div style="text-align: center; margin-top: 50px;">
-          <h3 style="color: #223366;">¿Necesitas saber cómo llegar?</h3>
-          <p>Estamos muy cerca de los barrios de Usera, Villaverde, Carabanchel y Aluche.</p>
-          <a href="https://maps.app.goo.gl/tFBQsxW2NMpnf48e8" target="_blank" class="boton-llamar" style="background: #e3a426;">📍 Ver en Google Maps</a>
         </div>
 
       </div>
     </section>
   </main>
 
+  <script>
+    const form = document.getElementById('appointmentForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "thanks"; // Redirige a la página de gracias
+        } else {
+          alert("Hubo un error al enviar. Por favor, inténtalo de nuevo o llámanos.");
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        alert("Algo salió mal. Por favor, contacta por WhatsApp.");
+      });
+    });
+  </script>
+
   <footer>
     <h3>Contacto</h3>
     <p>Teléfono: <a href="tel:+34613000030">+34 613 000 030</a></p>
-    <p>
-      <a href="https://maps.app.goo.gl/tFBQsxW2NMpnf48e8" target="_blank" rel="noopener noreferrer">
-        📍 Calle de la Mezquita 5, 28041 Madrid (Usera)
-      </a>
-    </p>
+    <p>📍 Calle de la Mezquita 5, 28041 Madrid (Usera)</p>
   </footer>
 
-  <div class="disclaimer" role="contentinfo" aria-label="Aviso legal RGPD">
-    <p>
-      Aviso: Para cumplir con el RGPD (Reglamento General de Protección de Datos) y asegurar que tus datos están
-      protegidos, debes leer nuestra política de 
-      <a href="privacidad.html"><strong>PRIVACIDAD</strong></a> 
-      y los 
-      <a href="aviso-legal.html"><strong>AVISOS LEGALES</strong></a>.
-      Esta web cumple estrictamente con la normativa vigente; el uso de este sitio implica la aceptación de las condiciones expuestas. 
-      <strong>Esta web NO USA COOKIES.</strong>
-    </p>
+  <div class="disclaimer">
+    <p>Aviso: Para cumplir con el RGPD debes leer la <a href="privacidad"><strong>PRIVACIDAD</strong></a> y los <a href="aviso-legal"><strong>AVISOS LEGALES</strong></a>. NO USA COOKIES.</p>
   </div>
-
-  <a href="https://wa.me/34613000030" class="wa-button" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; width: 60px; display: block;">
-    <img src="resources/whatsapp.png" alt="WhatsApp Emedical Madrid" style="width: 100%; height: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
-  </a>
-
-  <a href="https://t.me/EmedicalMadrid" class="tg-button" target="_blank" rel="noopener noreferrer" aria-label="Telegram" style="position: fixed; bottom: 90px; right: 20px; z-index: 9999; width: 60px; display: block;">
-    <img src="resources/Telegram_logo.svg" alt="Telegram Emedical Madrid" style="width: 100%; height: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
-  </a>
 
 </body>
 </html>

@@ -1,9 +1,9 @@
 /* ============================================================
-    🩺 Emedical Madrid — Estilos Finales (SOLUCIÓN CONTRASTE)
-    Revisión: Feb 2026 - Botones Sólidos y Títulos Centrados
+    🩺 Emedical Madrid — Estilos Finales (ELEGANTE & ACCESIBLE)
+    Revisión: Botones modernos, sombras suaves y alto contraste.
 ============================================================ */
 
-/* 1. FUENTES (Carga optimizada) */
+/* 1. FUENTES */
 @font-face {
   font-family: "Poppins";
   src: url("resources/Poppins/Poppins-Regular.woff2") format("woff2"),
@@ -42,7 +42,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 3. HEADER Y LOGO (Garantía de visibilidad) */
+/* 3. HEADER Y LOGO */
 header {
   display: flex;
   flex-direction: column;
@@ -67,14 +67,14 @@ header {
   opacity: 1 !important;
 }
 
-/* 4. TÍTULOS (CENTRADO TOTAL) */
+/* 4. TÍTULOS (CENTRADOS) */
 h1, h2, h3 { 
   text-align: center !important; 
   color: #111;
   width: 100%;
   margin-top: 15px;
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.7); /* Fondo sutil para legibilidad sobre la imagen */
+  background: rgba(255, 255, 255, 0.7);
   padding: 10px 0;
 }
 
@@ -82,22 +82,22 @@ h1, h2, h3 {
   font-size: 1.1rem;
   font-weight: 600;
   color: #1a2a5a;
-  background: rgb(255, 255, 255) !important; /* TOTALMENTE OPACO */
+  background: rgb(255, 255, 255) !important;
   padding: 12px 24px;
   border-radius: 12px;
   display: block; 
   margin: 10px auto;
   max-width: fit-content;
-  border: 2px solid #1a2a5a;
+  border: 1px solid rgba(0,0,0,0.08); /* Borde súper sutil casi invisible */
   text-align: center;
-  opacity: 1 !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra elegante */
 }
 
 /* 5. MENÚ */
 .menu {
   margin: 15px auto;
-  background: rgba(0, 0, 0, 0.9); /* Casi opaco */
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 12px;
   padding: 10px;
   max-width: 95%;
 }
@@ -117,55 +117,61 @@ h1, h2, h3 {
   text-decoration: none;
   font-weight: 600;
   padding: 8px 15px;
-  border-radius: 6px;
+  border-radius: 8px;
+  transition: background 0.3s;
 }
 
-/* 6. BOTÓN CTA (FONDO SÓLIDO — SIN TRANSPARENCIAS) */
+/* =========================================
+   6. BOTÓN CTA (ESTÉTICA MODERNA)
+========================================= */
 .boton-llamar {
   display: block !important;
   margin: 25px auto !important;
   width: fit-content;
-  padding: 18px 35px;
-  border-radius: 12px;
+  padding: 16px 36px;
+  border-radius: 50px; /* Forma de píldora moderna */
   text-decoration: none;
-  font-weight: 900 !important; /* Máximo grosor para los números */
+  font-weight: 700 !important; /* Negrita elegante, no grotesca */
+  font-size: 1.05rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
+  letter-spacing: 0.5px;
   
-  /* Sólido total */
+  /* Sombra amplia, difuminada y elegante */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  border: none !important; /* Fuera bordes negros feos */
+  
+  /* Garantía de opacidad para que no se mezcle con el fondo */
   opacity: 1 !important;
-  visibility: visible !important;
-  
-  /* Efecto 3D y borde para evitar difuminado */
-  border: 2px solid #000000 !important;
-  box-shadow: 0 6px 0px #b37e1a, 0 10px 20px rgba(0,0,0,0.5);
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
 }
 
-/* Botón Amarillo (Texto Negro sobre Amarillo Sólido) */
+/* Botón Amarillo Premium */
 .boton-amarillo, 
 [style*="background: #e3a426"], 
 [style*="background-color: #e3a426"] {
-  background: #ffb82b !important; /* Amarillo sólido vibrante */
-  background-color: #ffb82b !important;
-  color: #000000 !important;
+  background: #ffbc00 !important; /* Amarillo vibrante pero limpio */
+  background-color: #ffbc00 !important;
+  color: #111111 !important; /* Gris ultra oscuro, casi negro. Menos agresivo que #000 */
 }
 
-/* Botón Azul (Texto Blanco sobre Azul Sólido) */
+/* Botón Azul Premium */
 .boton-azul,
 [style*="background: #223366"],
 [style*="background-color: #223366"] {
-  background: #223366 !important;
-  background-color: #223366 !important;
+  background: #1a2a5a !important; /* Azul médico elegante */
+  background-color: #1a2a5a !important;
   color: #ffffff !important;
 }
 
+/* Efecto al pasar el ratón (se eleva suavemente) */
 .boton-llamar:hover {
-  transform: translateY(2px);
-  box-shadow: 0 3px 0px #b37e1a, 0 5px 15px rgba(0,0,0,0.4);
-  background-color: #f0a500 !important;
+  transform: translateY(-4px); /* Sube un poquito */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22) !important; /* La sombra se expande */
+  filter: brightness(1.05); /* Brilla ligeramente */
 }
+
+/* ========================================= */
 
 /* 7. CONTENIDO */
 .fila {
@@ -176,11 +182,11 @@ h1, h2, h3 {
 }
 
 .col-2 {
-  background: rgb(255, 255, 255) !important; /* SÓLIDO */
+  background: rgb(255, 255, 255) !important;
   padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  color: #222;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* Sombra elegante para el contenido también */
+  color: #333;
 }
 
 /* 8. FOOTER */
@@ -196,10 +202,10 @@ footer {
 @media (max-width: 600px) {
   .col-logo img { max-width: 180px; }
   h1 { font-size: 1.4rem; background: rgba(255,255,255,0.9); }
-  .boton-llamar { width: 95%; font-size: 1.1rem; padding: 15px 5px; }
+  .boton-llamar { width: 90%; font-size: 1rem; padding: 16px 20px; }
 }
 
 /* 10. BOTONES FLOTANTES */
 .wa-button, .tg-button {
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25)); /* Sombra suavizada */
 }

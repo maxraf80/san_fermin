@@ -1,9 +1,9 @@
 /* ============================================================
-    🩺 Emedical Madrid — Estilos Finales (Versión Total)
-    Corregido: Visibilidad Logo, Centrado H1 y Contraste Botones
+    🩺 Emedical Madrid — Estilos Finales (FULL OPTIMIZED)
+    Corregido: Visibilidad Logo, Centrado H1 y Máximo Contraste
 ============================================================ */
 
-/* 1. FUENTES (Carga optimizada) */
+/* 1. FUENTES (Carga rápida y sin texto invisible) */
 @font-face {
   font-family: "Poppins";
   src: url("resources/Poppins/Poppins-Regular.woff2") format("woff2"),
@@ -42,20 +42,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 3. HEADER Y LOGO (CORREGIDO) */
+/* 3. HEADER Y LOGO (Garantía de visibilidad) */
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-bottom: 10px;
 }
 
 .col-logo {
   display: block;
   width: 100%;
   text-align: center;
-  min-height: 50px; /* Evita colapso */
+  min-height: 80px;
 }
 
 .col-logo a {
@@ -65,38 +64,40 @@ header {
 
 .col-logo img {
   max-width: 220px;
-  width: 100%; /* Adaptable */
+  width: 100%;
   height: auto;
   margin: 20px auto;
   display: block;
-  /* Asegurar visibilidad */
+  /* Forzado de visibilidad tras cambios en .htaccess */
   visibility: visible !important;
   opacity: 1 !important;
 }
 
-/* 4. TÍTULOS (CENTRADOS) */
+/* 4. TÍTULOS (CENTRADO TOTAL) */
 h1, h2, h3 { 
   text-align: center !important; 
   color: #111;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-weight: 700;
 }
 
 .texto-encabezado {
   font-size: 1.1rem;
   font-weight: 600;
   color: #1a2a5a;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 24px;
   border-radius: 12px;
   display: block; 
   margin: 10px auto;
   max-width: fit-content;
   border: 1px solid rgba(0,0,0,0.1);
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* 5. MENÚ */
+/* 5. MENÚ NAVEGACIÓN */
 .menu {
   margin: 15px auto;
   background: rgba(0, 0, 0, 0.85);
@@ -126,25 +127,28 @@ h1, h2, h3 {
 
 .menu a:hover { background: rgba(255, 255, 255, 0.2); }
 
-/* 6. BOTONES CTA (CONTROL DE CONTRASTE Y CENTRADO) */
+/* 6. BOTÓN CTA (MÁXIMO CONTRASTE Y CENTRADO) */
 .boton-llamar {
   display: block !important;
-  margin: 20px auto !important;
+  margin: 25px auto !important;
   width: fit-content;
-  padding: 14px 28px;
-  border-radius: 10px;
+  padding: 16px 32px;
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.2s;
+  font-weight: 800; /* Texto extra negrita */
+  text-transform: uppercase; /* Más impacto visual */
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4); 
+  transition: all 0.3s ease;
   text-align: center;
+  border: 2px solid rgba(0,0,0,0.15);
 }
 
-/* Botón Amarillo -> Texto Negro */
+/* Botón Amarillo -> Texto Negro Absoluto (Contraste 100%) */
 .boton-amarillo, 
 [style*="background: #e3a426"], 
 [style*="background-color: #e3a426"] {
-  background-color: #e3a426 !important;
+  background-color: #ffb82b !important; /* Amarillo más intenso */
   color: #000000 !important;
 }
 
@@ -157,11 +161,12 @@ h1, h2, h3 {
 }
 
 .boton-llamar:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   filter: brightness(1.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
 }
 
-/* 7. CONTENIDO */
+/* 7. CUERPO DE CONTENIDO */
 .fila {
   max-width: 1100px;
   margin: 20px auto;
@@ -185,20 +190,21 @@ footer {
   margin-top: auto;
 }
 
-footer a { color: #e3a426; text-decoration: underline; }
+footer a { color: #ffb82b; text-decoration: underline; }
 
-/* 9. RESPONSIVE */
+/* 9. BOTONES FLOTANTES (WA/TG) */
+.wa-button, .tg-button {
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.wa-button:hover, .tg-button:hover { transform: scale(1.1); }
+
+/* 10. RESPONSIVE */
 @media (max-width: 600px) {
   .col-logo img { max-width: 180px; }
   h1 { font-size: 1.5rem; }
-  .texto-encabezado { font-size: 0.95rem; }
+  .texto-encabezado { font-size: 0.95rem; width: 90%; }
   .col-2 { padding: 20px; }
   .menu a { font-size: 0.8rem; padding: 6px 8px; }
+  .boton-llamar { width: 90%; padding: 14px 10px; font-size: 0.9rem; }
 }
-
-/* 10. BOTONES FLOTANTES */
-.wa-button, .tg-button {
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-  transition: transform 0.3s;
-}
-.wa-button:hover, .tg-button:hover { transform: scale(1.1); }

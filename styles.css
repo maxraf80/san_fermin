@@ -1,9 +1,11 @@
 /* ============================================================
-    🩺 Emedical Madrid — Estilos Finales (ELEGANTE & ACCESIBLE)
-    Revisión: Botones modernos, sombras suaves y alto contraste.
+    🩺 Emedical Madrid — Estilos Finales (ELEGANCIA & ACCESIBILIDAD)
+    Revisión: Botones premium sólidos, H3 limpio y sin parches.
 ============================================================ */
 
-/* 1. FUENTES */
+/* =========================================
+   1. FUENTES (Carga rápida optimizada)
+========================================= */
 @font-face {
   font-family: "Poppins";
   src: url("resources/Poppins/Poppins-Regular.woff2") format("woff2"),
@@ -24,7 +26,9 @@
   font-display: swap;
 }
 
-/* 2. RESET Y BASE */
+/* =========================================
+   2. RESET Y BASE
+========================================= */
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -34,7 +38,7 @@ body {
   font-family: "Poppins", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   background: url("resources/giorgio-trovato-Nr08ZwoCmHE-unsplash.webp") center/cover no-repeat;
-  background-attachment: scroll;
+  background-attachment: scroll; /* Mejor rendimiento en móviles */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,7 +46,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 3. HEADER Y LOGO */
+/* =========================================
+   3. HEADER Y LOGO
+========================================= */
 header {
   display: flex;
   flex-direction: column;
@@ -67,33 +73,51 @@ header {
   opacity: 1 !important;
 }
 
-/* 4. TÍTULOS (CENTRADOS) */
+/* =========================================
+   4. TÍTULOS (LIMPIOS Y ELEGANTES)
+========================================= */
 h1, h2, h3 { 
   text-align: center !important; 
-  color: #111;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 20px;
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 10px 0;
+  /* Eliminado el fondo de parche gris/blanco */
+}
+
+h1, h2 {
+  color: #111111;
+}
+
+/* Diseño específico y elegante para el H3 (Ej. "Contacto") */
+h3 {
+  color: #1a2a5a; /* Azul médico oscuro, máximo contraste y elegancia */
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #ffbc00; /* Subrayado inferior elegante */
+  max-width: fit-content; 
+  margin-left: auto; /* Centrado perfecto */
+  margin-right: auto;
 }
 
 .texto-encabezado {
   font-size: 1.1rem;
   font-weight: 600;
   color: #1a2a5a;
-  background: rgb(255, 255, 255) !important;
+  background: rgb(255, 255, 255) !important; /* Caja blanca sólida para destacar sobre la foto */
   padding: 12px 24px;
   border-radius: 12px;
   display: block; 
   margin: 10px auto;
   max-width: fit-content;
-  border: 1px solid rgba(0,0,0,0.08); /* Borde súper sutil casi invisible */
+  border: 1px solid rgba(0,0,0,0.08); 
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra elegante */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
 }
 
-/* 5. MENÚ */
+/* =========================================
+   5. MENÚ DE NAVEGACIÓN
+========================================= */
 .menu {
   margin: 15px auto;
   background: rgba(0, 0, 0, 0.85);
@@ -121,27 +145,28 @@ h1, h2, h3 {
   transition: background 0.3s;
 }
 
+.menu a:hover { background: rgba(255, 255, 255, 0.2); }
+
 /* =========================================
-   6. BOTÓN CTA (ESTÉTICA MODERNA)
+   6. BOTÓN CTA (ESTÉTICA MODERNA Y ACCESIBLE)
 ========================================= */
 .boton-llamar {
   display: block !important;
   margin: 25px auto !important;
   width: fit-content;
   padding: 16px 36px;
-  border-radius: 50px; /* Forma de píldora moderna */
+  border-radius: 50px; /* Forma de píldora premium */
   text-decoration: none;
-  font-weight: 700 !important; /* Negrita elegante, no grotesca */
+  font-weight: 700 !important; 
   font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   
-  /* Sombra amplia, difuminada y elegante */
+  /* Sombra amplia y difuminada (Efecto flotante) */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
-  border: none !important; /* Fuera bordes negros feos */
+  border: none !important; /* Sin bordes oscuros */
   
-  /* Garantía de opacidad para que no se mezcle con el fondo */
-  opacity: 1 !important;
+  opacity: 1 !important; /* Sin transparencias */
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   text-align: center;
 }
@@ -150,30 +175,29 @@ h1, h2, h3 {
 .boton-amarillo, 
 [style*="background: #e3a426"], 
 [style*="background-color: #e3a426"] {
-  background: #ffbc00 !important; /* Amarillo vibrante pero limpio */
+  background: #ffbc00 !important; /* Amarillo vibrante y opaco */
   background-color: #ffbc00 !important;
-  color: #111111 !important; /* Gris ultra oscuro, casi negro. Menos agresivo que #000 */
+  color: #111111 !important; /* Gris ultra oscuro, contraste perfecto pero elegante */
 }
 
 /* Botón Azul Premium */
 .boton-azul,
 [style*="background: #223366"],
 [style*="background-color: #223366"] {
-  background: #1a2a5a !important; /* Azul médico elegante */
+  background: #1a2a5a !important; /* Azul médico opaco */
   background-color: #1a2a5a !important;
   color: #ffffff !important;
 }
 
-/* Efecto al pasar el ratón (se eleva suavemente) */
 .boton-llamar:hover {
-  transform: translateY(-4px); /* Sube un poquito */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22) !important; /* La sombra se expande */
-  filter: brightness(1.05); /* Brilla ligeramente */
+  transform: translateY(-4px); 
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22) !important; 
+  filter: brightness(1.05); 
 }
 
-/* ========================================= */
-
-/* 7. CONTENIDO */
+/* =========================================
+   7. CONTENIDO PRINCIPAL
+========================================= */
 .fila {
   max-width: 1100px;
   margin: 20px auto;
@@ -182,14 +206,16 @@ h1, h2, h3 {
 }
 
 .col-2 {
-  background: rgb(255, 255, 255) !important;
+  background: rgb(255, 255, 255) !important; /* Fondo 100% blanco y sólido */
   padding: 35px;
   border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* Sombra elegante para el contenido también */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
   color: #333;
 }
 
-/* 8. FOOTER */
+/* =========================================
+   8. FOOTER
+========================================= */
 footer {
   background: #1a1a1a;
   color: #fff;
@@ -198,14 +224,35 @@ footer {
   margin-top: auto;
 }
 
-/* 9. RESPONSIVE */
-@media (max-width: 600px) {
-  .col-logo img { max-width: 180px; }
-  h1 { font-size: 1.4rem; background: rgba(255,255,255,0.9); }
-  .boton-llamar { width: 90%; font-size: 1rem; padding: 16px 20px; }
+footer a { color: #ffbc00; text-decoration: underline; }
+
+/* Adaptación del H3 oscuro para el footer */
+footer h3 {
+  color: #ffffff;
+  border-bottom: 2px solid #ffbc00;
 }
 
-/* 10. BOTONES FLOTANTES */
+/* =========================================
+   9. RESPONSIVE (MÓVILES)
+========================================= */
+@media (max-width: 600px) {
+  .col-logo img { max-width: 180px; }
+  
+  /* Pequeño fondo semitransparente solo para el H1 en móviles si pisa la foto */
+  h1 { font-size: 1.4rem; background: rgba(255,255,255,0.9); border-radius: 8px; padding: 5px; }
+  
+  .boton-llamar { width: 90%; font-size: 1rem; padding: 16px 20px; }
+  .col-2 { padding: 20px; }
+}
+
+/* =========================================
+   10. BOTONES FLOTANTES (WhatsApp / Telegram)
+========================================= */
 .wa-button, .tg-button {
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25)); /* Sombra suavizada */
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25)); 
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wa-button:hover, .tg-button:hover { 
+  transform: scale(1.1); 
 }

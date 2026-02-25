@@ -1,9 +1,9 @@
 /* ============================================================
-    🩺 Emedical Madrid — Estilos Finales (CORREGIDO Y CENTRADO)
-    Revisión: Feb 2026 - Accesibilidad y Alineación
+    🩺 Emedical Madrid — Estilos Finales (Versión Total)
+    Corregido: Visibilidad Logo, Centrado H1 y Contraste Botones
 ============================================================ */
 
-/* 1. FUENTES (Optimización de carga) */
+/* 1. FUENTES (Carga optimizada) */
 @font-face {
   font-family: "Poppins";
   src: url("resources/Poppins/Poppins-Regular.woff2") format("woff2"),
@@ -42,7 +42,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 3. HEADER Y LOGO */
+/* 3. HEADER Y LOGO (CORREGIDO) */
 header {
   display: flex;
   flex-direction: column;
@@ -52,23 +52,34 @@ header {
 }
 
 .col-logo {
+  display: block;
   width: 100%;
-  display: flex;
-  justify-content: center; /* Centra el contenedor del logo */
+  text-align: center;
+  min-height: 50px; /* Evita colapso */
+}
+
+.col-logo a {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .col-logo img {
   max-width: 220px;
+  width: 100%; /* Adaptable */
   height: auto;
   margin: 20px auto;
   display: block;
+  /* Asegurar visibilidad */
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-/* 4. TEXTOS Y H1 (CENTRADO) */
-h1, h2 { 
-  text-align: center; /* Centra todos los títulos por defecto */
+/* 4. TÍTULOS (CENTRADOS) */
+h1, h2, h3 { 
+  text-align: center !important; 
   color: #111;
   width: 100%;
+  margin-top: 10px;
 }
 
 .texto-encabezado {
@@ -78,14 +89,14 @@ h1, h2 {
   background: rgba(255, 255, 255, 0.9);
   padding: 10px 20px;
   border-radius: 12px;
-  display: block; /* Cambiado a block para centrado fácil */
+  display: block; 
   margin: 10px auto;
   max-width: fit-content;
   border: 1px solid rgba(0,0,0,0.1);
   text-align: center;
 }
 
-/* 5. MENÚ NAVEGACIÓN */
+/* 5. MENÚ */
 .menu {
   margin: 15px auto;
   background: rgba(0, 0, 0, 0.85);
@@ -113,22 +124,23 @@ h1, h2 {
   transition: background 0.3s;
 }
 
-/* 6. BOTONES CTA (CONTROL DE CONTRASTE) */
+.menu a:hover { background: rgba(255, 255, 255, 0.2); }
+
+/* 6. BOTONES CTA (CONTROL DE CONTRASTE Y CENTRADO) */
 .boton-llamar {
-  display: block; /* Cambiado a block para centrar con margin auto */
-  margin: 20px auto; /* Centrado horizontal automático */
+  display: block !important;
+  margin: 20px auto !important;
   width: fit-content;
   padding: 14px 28px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.2s, background-color 0.2s;
+  transition: transform 0.2s;
   text-align: center;
-  border: none;
 }
 
-/* Botón Amarillo (Texto Negro para contraste) */
+/* Botón Amarillo -> Texto Negro */
 .boton-amarillo, 
 [style*="background: #e3a426"], 
 [style*="background-color: #e3a426"] {
@@ -136,7 +148,7 @@ h1, h2 {
   color: #000000 !important;
 }
 
-/* Botón Azul (Texto Blanco para contraste) */
+/* Botón Azul -> Texto Blanco */
 .boton-azul,
 [style*="background: #223366"],
 [style*="background-color: #223366"] {
@@ -149,7 +161,7 @@ h1, h2 {
   filter: brightness(1.1);
 }
 
-/* 7. CONTENIDO PRINCIPAL */
+/* 7. CONTENIDO */
 .fila {
   max-width: 1100px;
   margin: 20px auto;
@@ -173,17 +185,20 @@ footer {
   margin-top: auto;
 }
 
-/* 9. BOTONES FLOTANTES */
-.wa-button, .tg-button {
-  transition: transform 0.3s;
-  display: block;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-}
+footer a { color: #e3a426; text-decoration: underline; }
 
-/* 10. RESPONSIVE */
+/* 9. RESPONSIVE */
 @media (max-width: 600px) {
   .col-logo img { max-width: 180px; }
-  h1 { font-size: 1.5rem; padding: 0 10px; }
+  h1 { font-size: 1.5rem; }
+  .texto-encabezado { font-size: 0.95rem; }
   .col-2 { padding: 20px; }
-  .wa-button, .tg-button { width: 55px !important; }
+  .menu a { font-size: 0.8rem; padding: 6px 8px; }
 }
+
+/* 10. BOTONES FLOTANTES */
+.wa-button, .tg-button {
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+  transition: transform 0.3s;
+}
+.wa-button:hover, .tg-button:hover { transform: scale(1.1); }

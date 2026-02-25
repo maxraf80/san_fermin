@@ -1,5 +1,5 @@
 # ============================================================
-# Emedical Madrid - .htaccess Definitivo Hostalia (Ultra-Compatible)
+# Emedical Madrid - .htaccess Definitivo (LOGO FIX)
 # ============================================================
 
 Options -MultiViews
@@ -11,29 +11,23 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://renovarcarnetdeconducirmadridbarato.com/$1 [L,R=301]
 
-# 2) ARREGLAR EL LOGO (Redirigir index.html físico a la raíz limpia)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
-RewriteRule ^index\.html$ / [R=301,L]
-
-# 3) REGLA PARA RENOVAR CARNET (Caso especial por longitud)
+# 2) REGLA PARA RENOVAR CARNET (Caso especial)
 RewriteRule ^renovar-carnet-conducir-madrid$ renovar-carnet-conducir-madrid.html [L,NC]
 
-# 4) REGLA GENÉRICA PARA EL RESTO DE PÁGINAS
+# 3) REGLA GENÉRICA PARA EL RESTO DE PÁGINAS (Quitar .html de la URL)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
 # ============================================================
-# 5) OPTIMIZACIÓN DE RENDIMIENTO (Caché y Velocidad)
+# 4) OPTIMIZACIÓN DE RENDIMIENTO (Caché y Velocidad)
 # ============================================================
 
-# COMPRESIÓN GZIP (Ahorra peso en CSS, JS y HTML)
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
 </IfModule>
 
-# CACHÉ DEL NAVEGADOR (Soluciona el error de Lighthouse)
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
@@ -46,17 +40,9 @@ RewriteRule ^(.*)$ $1.html [L]
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
 
-  # CSS y JavaScript: 1 mes de caché
+  # CSS y JavaScript
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType text/javascript "access plus 1 month"
-
-  # Fuentes: 1 año de caché (Soluciona error de Poppins)
-  ExpiresByType font/ttf "access plus 1 year"
-  ExpiresByType font/otf "access plus 1 year"
-  ExpiresByType font/woff "access plus 1 year"
-  ExpiresByType font/woff2 "access plus 1 year"
-  ExpiresByType application/font-woff "access plus 1 year"
 </IfModule>
 
 # FORZAR EL USO DE UTF-8

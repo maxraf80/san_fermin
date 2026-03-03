@@ -1,6 +1,6 @@
 /* ============================================================
-    🩺 Emedical Madrid — Estilos Finales (VERSIÓN PULIDA)
-    Correcciones: Contraste en footer, Botones adaptables y Legal.
+   🩺 Emedical Madrid — Estilos Finales (VERSIÓN PULIDA)
+   Correcciones: Contraste en footer, Botones adaptables, Legal y Optimización INP.
 ============================================================ */
 
 /* 1. FUENTES (Carga optimizada) */
@@ -150,7 +150,7 @@ h3 {
 
 .menu a:hover { background: rgba(255, 255, 255, 0.2); }
 
-/* 6. BOTONES CTA (ANTI-DESBORDAMIENTO) */
+/* 6. BOTONES CTA (ANTI-DESBORDAMIENTO Y FIX INP) */
 .boton-llamar {
   display: block !important;
   margin: 20px auto !important;
@@ -198,6 +198,22 @@ h3 {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   filter: brightness(1.05);
 }
+
+/* --- CORRECCIÓN INP PARA DISPOSITIVOS TÁCTILES (iOS / Safari) --- */
+.boton-llamar:active,
+.menu a:active,
+[style*="background: #f8f9fa"]:active,
+.boton-amarillo:active,
+.boton-azul:active {
+  transform: scale(0.96) !important;
+  opacity: 0.8 !important;
+  transition: all 0.05s ease !important; 
+}
+
+a[href^="tel:"] {
+  -webkit-tap-highlight-color: transparent;
+}
+/* ----------------------------------------------------------------- */
 
 /* 7. CONTENIDO PRINCIPAL */
 .fila {

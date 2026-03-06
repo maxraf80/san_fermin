@@ -1,20 +1,27 @@
 # ============================================================
-# Emedical Madrid - .htaccess Definitivo (LOGO FIX)
+# Emedical Madrid - .htaccess Definitivo (LOGO FIX + SEO FIX)
 # ============================================================
 
 Options -MultiViews
 RewriteEngine On
 RewriteBase /
 
-# 1) FORZAR HTTPS Y QUITAR WWW
+# 1) FORZAR HTTPS Y QUITAR WWW (Perfecto)
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://renovarcarnetdeconducirmadridbarato.com/$1 [L,R=301]
 
-# 2) REGLA PARA RENOVAR CARNET (Caso especial)
+# ============================================================
+# SOLUCIÓN SEO: REDIRIGIR .HTML A VERSIÓN LIMPIA (301)
+# ============================================================
+# Si se solicita directamente el archivo .html en el navegador, redirige a la ruta sin .html
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP/ [NC]
+RewriteRule ^(.*)\.html$ https://renovarcarnetdeconducirmadridbarato.com/$1 [R=301,L]
+
+# 2) REGLA PARA RENOVAR CARNET (Caso especial - Ya no es tan necesaria con la regla 3, pero no hace daño)
 RewriteRule ^renovar-carnet-conducir-madrid$ renovar-carnet-conducir-madrid.html [L,NC]
 
-# 3) REGLA GENÉRICA PARA EL RESTO DE PÁGINAS (Parche Hostalia/Plesk)
+# 3) REGLA GENÉRICA PARA EL RESTO DE PÁGINAS (Búsqueda interna)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f

@@ -6,7 +6,7 @@ Options -MultiViews
 RewriteEngine On
 RewriteBase /
 
-# 1) FORZAR HTTPS Y QUITAR WWW (Perfecto)
+# 1) FORZAR HTTPS Y QUITAR WWW
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://renovarcarnetdeconducirmadridbarato.com/$1 [L,R=301]
@@ -18,17 +18,15 @@ RewriteRule ^(.*)$ https://renovarcarnetdeconducirmadridbarato.com/$1 [L,R=301]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP/ [NC]
 RewriteRule ^(.*)\.html$ https://renovarcarnetdeconducirmadridbarato.com/$1 [R=301,L]
 
-# 2) REGLA PARA RENOVAR CARNET (Caso especial - Ya no es tan necesaria con la regla 3, pero no hace daño)
-RewriteRule ^renovar-carnet-conducir-madrid$ renovar-carnet-conducir-madrid.html [L,NC]
-
-# 3) REGLA GENÉRICA PARA EL RESTO DE PÁGINAS (Búsqueda interna)
+# 2) REGLA GENÉRICA PARA EL RESTO DE PÁGINAS (Búsqueda interna)
+# Esto permite que la web cargue el archivo .html aunque en la URL no esté escrito
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^(.*)$ /$1.html [L]
 
 # ============================================================
-# 4) OPTIMIZACIÓN DE RENDIMIENTO (Caché y Velocidad)
+# 3) OPTIMIZACIÓN DE RENDIMIENTO (Caché y Velocidad)
 # ============================================================
 
 <IfModule mod_deflate.c>
